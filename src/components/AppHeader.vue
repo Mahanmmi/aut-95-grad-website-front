@@ -27,10 +27,8 @@
         </div>
         <nav class="user-menu">
             <div class="user-link link">
-                گوگولی
-            </div>
-            <div class="user-link link">
-                گوگولی
+                <p style="display: inline-block; margin-left: 15px">گوگولی</p>
+                <img alt="human" src="../assets/human.svg">
             </div>
         </nav>
     </header>
@@ -104,6 +102,6 @@
     }
 
     .user-link {
-
+        display: flex;
     }
 </style>
