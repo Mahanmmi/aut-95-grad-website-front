@@ -33,6 +33,10 @@
                 </div>
             </div>
 
+            <div class="button-wrapper">
+                <button id="done">تمومه</button>
+                <button id="cancel">منصرف شدم</button>
+            </div>
         </div>
     </div>
 
@@ -102,6 +106,7 @@
         margin-top: 30px;
         border-radius: 10px;
         position: relative;
+        box-shadow: 10px 10px 5px $aut-grad-shadow;
 
     }
 
@@ -128,8 +133,29 @@
         justify-content: space-between;
         margin: 0 0 40px 0;
     }
-
-
+    .button-wrapper{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .button-wrapper button{
+        padding: 15px;
+        border-radius: 7px;
+        font-size: 25px;
+        font-weight: bold;
+        width: 200px;
+    }
+    #done{
+        background-color: $aut-grad-secondary;
+        color: white;
+        border: 2px solid $aut-grad-secondary;
+    }
+    #cancel{
+        background-color: white;
+        color: $aut-grad-secondary;
+        border: 4px solid $aut-grad-secondary;
+    }
 
     @media only screen and (max-width: 1200px) {
         .content-wrapper{

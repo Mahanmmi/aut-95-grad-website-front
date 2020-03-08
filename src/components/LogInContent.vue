@@ -63,7 +63,6 @@
         border-radius: 7px;
         font-size: 25px;
         font-weight: bold;
-        font-family: Sahel;
     }
     #Amirkabiri{
         background-color: $aut-grad-secondary;
