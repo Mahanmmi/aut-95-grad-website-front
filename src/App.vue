@@ -2,11 +2,13 @@
     <div id="app">
         <app-header :is-full-blue="isFullBlue"/>
         <router-view :class="{'dotted-background': !isFullBlue}"/>
+        <app-footer :is-full-blue="isFullBlue"/>
     </div>
 </template>
 
 <script>
   import AppHeader from "@/components/AppHeader";
+  import AppFooter from "@/components/AppFooter";
 
   export default {
     name: 'App',
@@ -18,6 +20,7 @@
       }
     },
     components: {
+      AppFooter,
       AppHeader
     }
   }
