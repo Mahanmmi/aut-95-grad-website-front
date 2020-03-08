@@ -117,6 +117,7 @@
         justify-content: space-around;
         align-content: flex-start;
         flex-wrap: wrap;
+        flex-direction: row-reverse;
         min-height: calc(100vh - 50px);
         width: 70%;
     }
