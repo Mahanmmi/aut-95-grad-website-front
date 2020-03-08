@@ -22,6 +22,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 5px;
         min-height: 40px;
         background-color: $aut-grad-primary;
         color: white;
