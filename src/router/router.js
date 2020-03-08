@@ -1,17 +1,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HelloWorld from "@/components/HelloWorld";
+import Home from "../View/Home";
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: '/',
-    component: HelloWorld
-  }
+    {
+        path: '/',
+        name: 'home',
+        component: Home
+    }
 ];
 
 export const router = new VueRouter({
-  routes,
-  mode: 'history'
+    routes,
+    mode: 'history'
 });

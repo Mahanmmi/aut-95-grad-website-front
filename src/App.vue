@@ -17,6 +17,12 @@
 </script>
 
 <style lang="scss">
+    * {
+        margin : 0;
+        padding : 0;
+        direction: rtl;
+    }
+
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
