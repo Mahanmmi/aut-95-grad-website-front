@@ -126,7 +126,7 @@
                                 v-model="this.unImportantData.gitHub"
                                 placeholder=" "
                         />
-                        <label for="birthDate">گیت‌هاب</label>
+                        <label for="gitHub">گیت‌هاب</label>
                     </div>
 
                 </div>
