@@ -1,22 +1,27 @@
 <template>
     <div id="app" class="dotted-background">
-        <img alt="Vue logo" src="./assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <notifications group="auth" position="top center"></notifications>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
 
-  export default {
-    name: 'App',
-    components: {
-      HelloWorld
+    export default {
+        name: 'App',
+        components: {
+
+        }
     }
-  }
 </script>
 
 <style lang="scss">
+    * {
+        margin : 0;
+        padding : 0;
+        direction: rtl;
+    }
+
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -36,4 +41,5 @@
         background-image: radial-gradient($dot-color $dot-size, $dot-bg-color $dot-size);
         background-size: $dot-space $dot-space;
     }
+
 </style>
