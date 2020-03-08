@@ -2,22 +2,25 @@
     <div id="app">
         <app-header :is-full-blue="isFullBlue"/>
         <router-view :class="{'dotted-background': !isFullBlue}"/>
+        <app-footer :is-full-blue="isFullBlue"/>
     </div>
 </template>
 
 <script>
   import AppHeader from "@/components/AppHeader";
+  import AppFooter from "@/components/AppFooter";
 
   export default {
     name: 'App',
-    data() {
-      return {
-        isFullBlue: this.$route.name !== 'home' ||
-          this.$route.name !== 'signin' ||
-          this.$route.name !== 'signup'
+    computed: {
+      isFullBlue() {
+        return this.$route.name === 'home' ||
+          this.$route.name === 'signin' ||
+          this.$route.name === 'signup'
       }
     },
     components: {
+      AppFooter,
       AppHeader
     }
   }

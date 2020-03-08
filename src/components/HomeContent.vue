@@ -59,7 +59,6 @@
 
 <style lang="scss" scoped>
     @import "public/colors";
-
     .home-wrapper {
         background: $aut-grad-primary none;
         display: flex;
