@@ -28,7 +28,7 @@
     }
 
     .home-wrapper {
-        background-color:$aut-grad-primary-dark;
+        background-color:$aut-grad-primary;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -40,7 +40,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        box-shadow: 20px 20px 10px black;
+        box-shadow: 20px 20px 40px black;
         padding: 10px;
         min-width: 500px;
         min-height: 350px;

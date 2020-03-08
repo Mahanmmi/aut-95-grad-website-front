@@ -57,9 +57,11 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    @import "public/colors";
+
     .home-wrapper {
-        background: #192442 none;
+        background: $aut-grad-primary none;
         display: flex;
         justify-content: center;
         align-items: center;
