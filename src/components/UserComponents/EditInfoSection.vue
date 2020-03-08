@@ -165,9 +165,6 @@
     @import "../../../public/colors";
 
     .content-wrapper {
-        width: 65%;
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         margin: 40px 70px 100px 70px;
     }
@@ -176,7 +173,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 50px;
+        padding: 50px 0;
         background-color: white;
         margin: 30px;
         border-radius: 10px;
@@ -219,7 +216,7 @@
 
     .right {
         width: 40%;
-        margin-right: 0px;
+        margin-right: 0;
     }
     .bottom{
         margin-left: 60px;
@@ -233,7 +230,6 @@
         border-bottom: 4px solid $aut-grad-secondary;
         box-shadow: none;
         color: #111;
-        width: 100%;
         font-size: 15px;
         -webkit-appearance: none;
         border-radius: 0;
@@ -325,7 +321,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 50px;
+        padding: 50px 0;
         background-color: white;
         margin: 30px;
         border-radius: 10px;

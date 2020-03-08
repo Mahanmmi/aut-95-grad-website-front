@@ -1,18 +1,16 @@
 <template>
     <div class="wrapper">
         <user-profile-holder/>
-        <edit-info-section></edit-info-section>
+        <router-view class="subrouter"/>
     </div>
 </template>
 
 <script>
   import UserProfileHolder from "@/components/UserComponents/UserProfileHolder";
-  // import UserComponentsments from "@/components/UserComponents/UserComments";
-  import EditInfoSection from "../components/UserComponents/EditInfoSection";
 
   export default {
     name: "User",
-    components: {EditInfoSection, UserProfileHolder}
+    components: {UserProfileHolder}
   }
 </script>
 
@@ -24,11 +22,21 @@
         padding-bottom: 10vh;
     }
 
+    .subrouter {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+    }
+
     @media only screen and (max-width: 768px) {
         .wrapper {
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
+        }
+
+        .subrouter {
+            width: 80%;
         }
     }
 </style>

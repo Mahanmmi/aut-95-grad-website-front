@@ -5,6 +5,7 @@ import LogIn from "../View/LogIn";
 import ShortAnswerQuestions from "../View/ShortAnswerQuestions";
 import Graduates from "@/View/Graduates";
 import User from "@/View/User";
+import EditInfoSection from "@/components/UserComponents/EditInfoSection";
 
 Vue.use(VueRouter);
 
@@ -32,7 +33,14 @@ const routes = [
     {
         path: '/user',
         name: 'user',
-        component: User
+        component: User,
+        children: [
+            {
+                path: '/user/edit',
+                name: 'userEdit',
+                component: EditInfoSection
+            }
+        ]
     }
 ];
 
