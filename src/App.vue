@@ -1,17 +1,15 @@
 <template>
     <div id="app" class="dotted-background">
-        <notifications group="auth" position="top center"></notifications>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
 
+    import AppHeader from "@/components/AppHeader";
     export default {
         name: 'App',
-        components: {
-
-        }
+        components: {AppHeader}
     }
 </script>
 
