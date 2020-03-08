@@ -1,17 +1,17 @@
 <template>
-    <div id="app" class="dotted-background">
-        <img alt="Vue logo" src="./assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="app">
+        <app-header/>
+        <router-view class="dotted-background"/>
     </div>
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
+  import AppHeader from "@/components/AppHeader";
 
   export default {
     name: 'App',
     components: {
-      HelloWorld
+      AppHeader
     }
   }
 </script>
