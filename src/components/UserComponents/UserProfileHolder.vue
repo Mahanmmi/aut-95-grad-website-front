@@ -5,7 +5,7 @@
                 <img class="profile-pic" src="../../assets/testpic.svg" alt="pic">
             </div>
             <div class="profile-data">
-                <div v-if="!isEditing" class="no-edit-wrapper">
+                <div v-if="!isEditing" class="shifting-wrapper">
                     <div class="user-data">
                         <vue-text-fit class="data">{{user.name}}</vue-text-fit>
                         <vue-text-fit class="data">{{user.studentNumber | numberPersianizer}}</vue-text-fit>
@@ -24,7 +24,18 @@
                         </div>
                     </div>
                     <div class="divider"/>
-                    <button class="bottom-button">تو هم رای بده</button>
+                    <button v-if="isMe" class="big-full-button">تو هم رای بده</button>
+                    <button v-else class="big-full-button">تو هم رای بده</button>
+                </div>
+                <div v-else class="shifting-wrapper">
+                    <div class="small-button">
+                        <vue-text-fit style="margin-left: 6px">تغییر عکس</vue-text-fit>
+                        <img alt="image logo" src="../../assets/image-logo.svg">
+                    </div>
+                    <button class="big-full-button">پاسخ به سوالات</button>
+                    <div class="divider"/>
+                    <button class="big-full-button">تمومه</button>
+                    <button class="big-empty-button">منصرف شدم</button>
                 </div>
             </div>
         </div>
@@ -49,6 +60,9 @@
     computed: {
       isEditing() {
         return this.$route.name === 'userEdit';
+      },
+      isMe() {
+        return this.$route.name === 'userSelf';
       }
     },
     filters: {
@@ -147,7 +161,7 @@
         left: -5%;
     }
 
-    .no-edit-wrapper {
+    .shifting-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -161,7 +175,7 @@
         justify-content: space-between;
         align-items: center;
         margin-top: -7vw;
-        padding: 8vw 5px 20px;
+        padding: 8vw 10px 20px;
         border-radius: 10px;
         background-color: $aut-grad-primary;
         box-shadow: 0 5px 8px 3px $aut-grad-shadow;
@@ -185,7 +199,10 @@
     .divider {
         width: 90%;
         border: 1px solid $aut-grad-secondary;
+        background-color: $aut-grad-secondary;
         margin: 10px 0;
+        padding: 0;
+        height: 0;
     }
 
     .most-wrapper {
@@ -223,11 +240,11 @@
         margin: 0 5px 0 10px;
     }
 
-    .bottom-button {
+    .big-full-button {
         color: white;
         border-radius: 10px;
         border: none;
-        width: 70%;
+        width: 80%;
         padding: 10px;
         text-align: center;
         background-color: $aut-grad-secondary;
@@ -237,8 +254,43 @@
         margin: 7px 0;
     }
 
-    .bottom-button:hover {
+    .big-full-button:hover {
         background-color: $aut-grad-secondary-dark;
+    }
+
+    .small-button {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: $aut-grad-secondary;
+        border-radius: 10px;
+        width: 45%;
+        padding: 5px;
+        text-align: center;
+        background-color: white;
+        font-weight: bold;
+        border: 5px solid $aut-grad-secondary;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 7px 0 15px 0;
+    }
+
+    .small-button:hover, .big-empty-button:hover {
+        background-color: #eeeeee;
+    }
+
+    .big-empty-button {
+        color: $aut-grad-secondary;
+        border-radius: 10px;
+        border: 5px solid $aut-grad-secondary;
+        width: 80%;
+        padding: 5px;
+        text-align: center;
+        background-color: white;
+        font-weight: bold;
+        font-size: x-large;
+        cursor: pointer;
+        margin: 7px 0;
     }
 
     @media only screen and (max-width: 768px) {
