@@ -134,7 +134,7 @@
         font-size: x-large;
         padding: 5px;
         width: 100%;
-        box-shadow: 0 5px 10px 0 #adadad;
+        box-shadow: 0 5px 10px 0 $aut-grad-shadow;
     }
 
     .graduate-container {
@@ -143,7 +143,7 @@
         margin: 20px 5px 0 5px;
         background-color: #12f123;
         border-radius: 10px;
-        box-shadow: 0 5px 10px 0 #adadad;
+        box-shadow: 0 5px 10px 0 $aut-grad-shadow;
     }
 
     .graduate-image {
