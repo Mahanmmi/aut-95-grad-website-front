@@ -58,11 +58,11 @@
 </script>
 
 <style scoped>
-    .home-wrapper{
-        background-color: #192442;
+    .home-wrapper {
+        background: #192442 none;
         display: flex;
         justify-content: center;
-        align-items:center;
-        min-height:calc(100vh - 50px);
+        align-items: center;
+        min-height: calc(100vh - 50px);
     }
 </style>

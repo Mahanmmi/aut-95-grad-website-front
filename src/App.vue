@@ -1,19 +1,18 @@
 <template>
-    <div id="app">
-        <app-header/>
-        <router-view class="dotted-background"/>
+
+    <div id="app" class="dotted-background">
+        <AppHeader></AppHeader>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-  import AppHeader from "@/components/AppHeader";
 
-  export default {
-    name: 'App',
-    components: {
-      AppHeader
+    import AppHeader from "./components/AppHeader";
+    export default {
+        name: 'App',
+        components: {AppHeader}
     }
-  }
 </script>
 
 <style lang="scss">
@@ -42,4 +41,5 @@
         background-image: radial-gradient($dot-color $dot-size, $dot-bg-color $dot-size);
         background-size: $dot-space $dot-space;
     }
+
 </style>
