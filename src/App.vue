@@ -12,11 +12,11 @@
 
   export default {
     name: 'App',
-    data() {
-      return {
-        isFullBlue: this.$route.name !== 'home' ||
-          this.$route.name !== 'signin' ||
-          this.$route.name !== 'signup'
+    computed: {
+      isFullBlue() {
+        return this.$route.name === 'home' ||
+          this.$route.name === 'signin' ||
+          this.$route.name === 'signup'
       }
     },
     components: {

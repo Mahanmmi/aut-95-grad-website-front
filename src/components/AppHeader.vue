@@ -9,10 +9,11 @@
                 صفحه اول
             </router-link>
             <router-link
-                to="/"
+                to="/graduates"
                 class="main-link link"
+                exact-active-class="link-active"
             >
-                صفحه اول
+                فارغ‌التحصیلان
             </router-link>
             <router-link
                 to="/"
