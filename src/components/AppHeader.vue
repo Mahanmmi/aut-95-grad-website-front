@@ -63,7 +63,7 @@
     }
 
     .header-shadow {
-        box-shadow: 0 0 10px 10px #adadad;
+        box-shadow: 0 0 10px 10px $aut-grad-shadow;
     }
 
     .main-menu {

@@ -4,6 +4,7 @@ import Home from "../View/Home";
 import LogIn from "../View/LogIn";
 import ShortAnswerQuestions from "../View/ShortAnswerQuestions";
 import Graduates from "@/View/Graduates";
+import User from "@/View/User";
 import UserInfo from "../View/UserInfo";
 
 Vue.use(VueRouter);
@@ -33,6 +34,11 @@ const routes = [
         path: '/me/information',
         name: 'editInfo',
         component: UserInfo
+    },
+    {
+        path: '/user',
+        name: 'user',
+        component: User
     }
 ];
 
