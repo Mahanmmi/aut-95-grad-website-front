@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <app-header/>
-        <router-view class="dotted-background"/>
+        <app-header :is-full-blue="isFullBlue"/>
+        <router-view :class="{'dotted-background': !isFullBlue}"/>
     </div>
 </template>
 
@@ -10,6 +10,13 @@
 
   export default {
     name: 'App',
+    data() {
+      return {
+        isFullBlue: this.$route.name !== 'home' ||
+          this.$route.name !== 'signin' ||
+          this.$route.name !== 'signup'
+      }
+    },
     components: {
       AppHeader
     }
@@ -18,8 +25,8 @@
 
 <style lang="scss">
     * {
-        margin : 0;
-        padding : 0;
+        margin: 0;
+        padding: 0;
         direction: rtl;
     }
 

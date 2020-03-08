@@ -88,12 +88,8 @@
 <script>
   export default {
     name: "AppHeader",
-    data() {
-      return {
-        isFullBlue: this.$route.name !== 'home' ||
-          this.$route.name !== 'signin' ||
-          this.$route.name !== 'signup'
-      }
+    props: {
+      isFullBlue: Boolean
     }
   }
 </script>
