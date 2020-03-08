@@ -41,7 +41,7 @@
         flex-direction: column;
         justify-content: space-between;
         box-shadow: 20px 20px 40px black;
-        padding: 10px;
+        padding: 25px 15px 15px 15px;
         min-width: 500px;
         min-height: 350px;
     }
@@ -58,7 +58,7 @@
         margin: 20px 10px 10px 10px;
     }
     button{
-        margin: 10px 30px 25px 30px;
+        margin: 10px 30px 20px 30px;
         padding: 15px;
         border-radius: 7px;
         font-size: 25px;
