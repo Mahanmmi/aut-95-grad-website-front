@@ -7,7 +7,7 @@
                     keyboard_arrow_down
                 </i>
             </div>
-            <div class="fields-wrapper">
+            <div class="fields-wrapper-top">
                 <div class="top">
                     <div class="right">
                         <div class="single-field">
@@ -83,10 +83,53 @@
         </div>
         <div class="not-important-info">
             <div class="head">
-
+                <p class="title">اطلاعات ‌نه‌چندان‌ضروری</p>
+                <i class="material-icons">
+                    keyboard_arrow_down
+                </i>
             </div>
-            <div class="fields-wrapper">
+            <div class="fields-wrapper-bottom">
+                <div class="right">
+                    <div class="single-field">
+                        <input
+                                id="telegram"
+                                type="text"
+                                v-model="this.unImportantData.telegram"
+                                placeholder=" "
+                        />
+                        <label for="firstName">تلگرام</label>
+                    </div>
+                    <div class="single-field">
+                        <input
+                                id="tweeter"
+                                type="text"
+                                v-model="this.unImportantData.tweeter"
+                                placeholder=" "
+                        />
+                        <label for="lastName" >توییتر</label>
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="single-field">
+                        <input
+                                id="instagram"
+                                type="text"
+                                v-model="this.unImportantData.instagram"
+                                placeholder=" "
+                        />
+                        <label for="userName">اینستاگرام</label>
+                    </div>
+                    <div class="single-field">
+                        <input
+                                id="gitHub"
+                                type="text"
+                                v-model="this.unImportantData.gitHub"
+                                placeholder=" "
+                        />
+                        <label for="birthDate">گیت‌هاب</label>
+                    </div>
 
+                </div>
             </div>
         </div>
     </div>
@@ -119,17 +162,17 @@
 
 
 <style lang="scss" scoped>
-    @import "public/colors";
+    @import "../../../public/colors";
 
     .content-wrapper {
         width: 65%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 100px 70px 100px 70px;
+        margin: 40px 70px 100px 70px;
     }
 
-    .fields-wrapper {
+    .fields-wrapper-top {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -278,6 +321,19 @@
         margin: 0 0 40px 0;
     }
 
+    .fields-wrapper-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 50px;
+        background-color: white;
+        margin: 30px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px $aut-grad-shadow;
+    }
+
+
+
     @media only screen and (max-width: 1200px) {
         .top{
             flex-direction: column;
@@ -292,6 +348,10 @@
         .bottom{
             margin: 0;
             width: 90%;
+        }
+        .fields-wrapper-bottom{
+            flex-direction: column;
+            justify-content: center;
         }
     }
 </style>
