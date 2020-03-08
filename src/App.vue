@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
         <app-header :is-full-blue="isFullBlue"/>
         <router-view :class="{'dotted-background': !isFullBlue}"/>
         <app-footer :is-full-blue="isFullBlue"/>

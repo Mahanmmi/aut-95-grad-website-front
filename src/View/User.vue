@@ -1,17 +1,18 @@
 <template>
     <div class="wrapper">
         <user-profile-holder/>
-        <user-comments/>
+        <edit-info-section></edit-info-section>
     </div>
 </template>
 
 <script>
   import UserProfileHolder from "@/components/UserComponents/UserProfileHolder";
-  import UserComments from "@/components/UserComponents/UserComments";
+  // import UserComponentsments from "@/components/UserComponents/UserComments";
+  import EditInfoSection from "../components/UserComponents/EditInfoSection";
 
   export default {
     name: "User",
-    components: {UserComments, UserProfileHolder}
+    components: {EditInfoSection, UserProfileHolder}
   }
 </script>
 
