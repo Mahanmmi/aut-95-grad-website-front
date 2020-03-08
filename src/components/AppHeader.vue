@@ -1,9 +1,10 @@
 <template>
-    <header class="header">
+    <header class="header" :class="{ 'header-shadow': shadowHeader }">
         <nav class="main-menu">
             <router-link
                 to="/"
                 class="main-link link"
+                exact-active-class="link-active"
             >
                 صفحه اول
             </router-link>
@@ -56,7 +57,8 @@
                 <path d="M67.92 109.78L106.8 88.45V114.37H29.04V88.45L67.92 109.78Z" fill="#9E8B4D"/>
             </g>
             <defs>
-                <filter id="filter0_d" x="0" y="0" width="237.659" height="207.414" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <filter id="filter0_d" x="0" y="0" width="237.659" height="207.414" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
                     <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                     <feOffset dy="8"/>
@@ -80,7 +82,12 @@
 
 <script>
   export default {
-    name: "AppHeader"
+    name: "AppHeader",
+    data() {
+      return {
+        shadowHeader: this.$route.name !== 'home'
+      }
+    }
   }
 </script>
 
@@ -97,11 +104,14 @@
         width: 100%;
         height: 90px;
         z-index: 999;
-        box-shadow: 0 0 10px 10px #adadad;
         background-color: $aut-grad-primary;
         color: $aut-grad-secondary;
         font-weight: bold;
         font-size: x-large;
+    }
+
+    .header-shadow {
+        box-shadow: 0 0 10px 10px #adadad;
     }
 
     .main-menu {

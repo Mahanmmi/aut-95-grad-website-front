@@ -36,7 +36,8 @@
                 <path d="M67.92 109.78L106.8 88.45V114.37H29.04V88.45L67.92 109.78Z" fill="#9E8B4D"/>
             </g>
             <defs>
-                <filter id="filter0_d" x="0" y="0" width="237.659" height="207.414" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <filter id="filter0_d" x="0" y="0" width="237.659" height="207.414" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
                     <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                     <feOffset dy="8"/>
@@ -47,22 +48,21 @@
                 </filter>
             </defs>
         </svg>
-
     </div>
 </template>
 
 <script>
-    export default {
-        name: "HomeContent"
-    }
+  export default {
+    name: "HomeContent"
+  }
 </script>
 
 <style scoped>
-    .home-wrapper{
-        background-color: #192442;
+    .home-wrapper {
+        background: #192442 none;
         display: flex;
         justify-content: center;
-        align-items:center;
-        min-height:calc(100vh - 50px);
+        align-items: center;
+        min-height: calc(100vh - 50px);
     }
 </style>
