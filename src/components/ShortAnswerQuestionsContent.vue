@@ -7,7 +7,7 @@
             </div>
             <div class="form-wrapper" >
                 <div class="single-question" v-for="question in this.questions" v-bind:key="question">
-                    <label class="label" >{{question.text}}
+                    <label class="label" ><div class="span">{{question.text}}</div>
                     <input
                             type="text"
                             v-model="question.ans"
@@ -51,7 +51,7 @@
                         ans: ""
                     },
                     {
-                        text: "من یه پرندم",
+                        text: "من یه پرنده خیلی خیلی طولانی ام",
                         ans: ""
                     },
                     {
@@ -124,25 +124,28 @@
         border-radius: 10px;
         position: relative;
         box-shadow: 10px 10px 5px $aut-grad-shadow;
+        padding-top: 30px;
 
     }
 
     label {
         color: $aut-grad-secondary;
         font-weight: bold;
-        margin-top: 20px;
+        margin: 1vw 2vw 0 2vw;
         width: 100%;
+        display: flex;
+        flex-direction: row;
     }
 
     input {
         border: 0;
         outline: 0;
         padding: 0.5rem 0;
-        border-bottom: 3px solid $aut-grad-secondary;
+        border-bottom: 4px solid $aut-grad-secondary;
         box-shadow: none;
         color: #111;
-        width: 70%;
-        margin-right: 30px;
+        width: 90%;
+        margin: 0 2vw 0 2vw;
 
     }
 
@@ -181,6 +184,14 @@
         border: 4px solid $aut-grad-secondary;
         box-shadow: 10px 10px 5px $aut-grad-shadow;
     }
+    .button-wrapper button:hover {
+        cursor: pointer;
+    }
+
+    label .span{
+        width: 10vw;
+
+    }
 
     @media only screen and (max-width: 1200px) {
         .content-wrapper{
@@ -192,11 +203,9 @@
         .content-wrapper{
             margin: 0;
         }
-        label{
-            font-size: 14px;
-        }
-        input{
-            margin: 5px;
+
+        label .span{
+            width: 25vw;
         }
 
     }
