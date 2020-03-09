@@ -310,9 +310,8 @@
     }
     .content-wrapper {
         justify-content: center;
-        margin: 0 0px 100px 0px;
-        position: relative;
-        top: 4vw;
+        margin: 3vw 0px 100px 0px;
+
     }
 
     .card-wrapper {
