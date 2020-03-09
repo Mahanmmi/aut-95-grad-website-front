@@ -474,6 +474,11 @@
         border: 2px solid $aut-grad-secondary;
     }
 
+    #submit:hover{
+        background-color: $aut-grad-secondary-dark;
+        box-shadow: 0px 3px 5px $aut-grad-shadow;
+    }
+
     .upload-btn-wrapper {
         position: relative;
         overflow: hidden;
@@ -494,10 +499,10 @@
         cursor: pointer;
     }
 
+
     .upload-btn-wrapper input:hover {
         cursor: pointer;
     }
-
     .upload-btn-wrapper input[type=file] {
         font-size: 100px;
         position: absolute;
