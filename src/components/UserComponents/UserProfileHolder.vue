@@ -24,8 +24,8 @@
                         </div>
                     </div>
                     <div class="divider"/>
-                    <button v-if="isMe" class="big-full-button">تو هم رای بده</button>
-                    <button v-else class="big-full-button">تو هم رای بده</button>
+                    <router-link tag="button" to="/voting" v-if="!isMe" class="big-full-button">تو هم رای بده</router-link>
+                    <router-link tag="button" to="/user/edit" v-else class="big-full-button">ویرایش اطلاعات</router-link>
                 </div>
                 <div v-else class="shifting-wrapper">
                     <div class="small-button">
