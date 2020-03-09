@@ -23,7 +23,7 @@
     }
 
     .subrouter {
-        width: 65%;
+        width: 75%;
         display: flex;
         flex-direction: column;
     }

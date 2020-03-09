@@ -299,7 +299,6 @@
     .content-wrapper {
         justify-content: center;
         margin: 30px 0px 100px 0px;
-        width: 65%;
     }
 
     .card-wrapper {
