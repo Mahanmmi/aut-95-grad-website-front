@@ -1,6 +1,6 @@
 <template>
     <div class="profile-wrapper">
-        <div class="profile">
+        <section class="profile">
             <div class="profile-pic-wrapper">
                 <img class="profile-pic" src="../../assets/testpic.svg" alt="pic">
             </div>
@@ -38,7 +38,14 @@
                     <button class="big-empty-button">منصرف شدم</button>
                 </div>
             </div>
-        </div>
+        </section>
+        <section v-if="!isEditing" class="short-answer-wrapper">
+            <p class="short-answer" v-for="sa in shortAnswers" :key="sa.question">
+                <span class="question">{{sa.question}}</span>
+                <span class="text-divider"> | </span>
+                <span class="answer">{{sa.answer}}</span>
+            </p>
+        </section>
     </div>
 </template>
 
@@ -54,7 +61,77 @@
           studentNumber: 9531899,
           email: 'yegoogooli@googosssslkade.com',
           age: 21
-        }
+        },
+        shortAnswers: [
+          {
+            question: 'سلام',
+            answer: 'علیک'
+          },
+          {
+            question: 'سلام چطوری ها',
+            answer: 'ممنون خیلی خوب و  طولانیم شما چطوری خانوم بچه ها خوبن؟'
+          },
+          {
+            question: 'کجا',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'کی',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'هان',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'کجا',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'کی',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'هان',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'کجا',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'کی',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'هان',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'کجا',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'کی',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'هان',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'کجا',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'کی',
+            answer: 'مدرسان شریف'
+          },
+          {
+            question: 'هان',
+            answer: 'مدرسان شریف'
+          }
+        ]
       }
     },
     computed: {
@@ -133,11 +210,10 @@
         display: flex;
         flex-direction: column;
         width: 17%;
-        border: 1px solid red;
     }
 
     .profile {
-        height: 400px;
+        min-height: 400px;
         text-align: center;
     }
 
@@ -178,7 +254,7 @@
         padding: 8vw 10px 20px;
         border-radius: 10px;
         background-color: $aut-grad-primary;
-        box-shadow: 0 5px 8px 3px $aut-grad-shadow;
+        box-shadow: 10px 10px 10px $aut-grad-shadow;
     }
 
     .user-data {
@@ -293,10 +369,43 @@
         margin: 7px 0;
     }
 
+    .short-answer-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100px;
+        border-radius: 10px;
+        background-color: $aut-grad-primary;
+        box-shadow: 10px 10px 10px $aut-grad-shadow;
+        margin-top: 30px;
+        box-sizing: border-box;
+        padding: 15px 15px;
+    }
+
+    .short-answer {
+        text-align: right;
+        margin: 3px 0;
+    }
+
+    .text-divider {
+        display: inline;
+        color: $aut-grad-secondary;
+        font-size: larger;
+        height: 100%;
+    }
+
+    .question {
+        color: $aut-grad-secondary;
+    }
+
+    .answer {
+        color: white;
+        word-wrap: break-spaces;
+    }
+
     @media only screen and (max-width: 768px) {
         .profile-wrapper {
             width: 80%;
-            padding-bottom: 45vw;
         }
 
         .profile-pic-wrapper {
