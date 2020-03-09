@@ -6,90 +6,74 @@
             </div>
             <div class="graduate-container">
                 <div class="graduate-image">
-                    <img alt="grad photo" src="">
+                    <img alt="grad photo" src="../assets/testpic.svg">
                 </div>
                 <div class="graduate-name">
-                     اسم یارو خیلی خوبه و طولانی و لعنتی
+                    اسم یارو خیلی خوبه و طولانی و لعنتی
                 </div>
             </div>
             <div class="graduate-container">
                 <div class="graduate-image">
-                    <img alt="grad photo" src="">
+                    <img alt="grad photo" src="../assets/testpic.svg">
                 </div>
                 <div class="graduate-name">
-                    اسم یارو خیلی خوبه
+                    اسم یارو خیلی خوبه و طولانی و لعنتی
                 </div>
             </div>
             <div class="graduate-container">
                 <div class="graduate-image">
-                    <img alt="grad photo" src="">
+                    <img alt="grad photo" src="../assets/testpic.svg">
                 </div>
                 <div class="graduate-name">
-                    اسم یارو خیلی خوبه
+                    اسم یارو خیلی خوبه و طولانی و لعنتی
                 </div>
             </div>
             <div class="graduate-container">
                 <div class="graduate-image">
-                    <img alt="grad photo" src="">
+                    <img alt="grad photo" src="../assets/testpic.svg">
                 </div>
                 <div class="graduate-name">
-                    اسم یارو خیلی خوبه
+                    اسم یارو خیلی خوبه و طولانی و لعنتی
                 </div>
             </div>
             <div class="graduate-container">
                 <div class="graduate-image">
-                    <img alt="grad photo" src="">
+                    <img alt="grad photo" src="../assets/testpic.svg">
                 </div>
                 <div class="graduate-name">
-                    اسم یارو خیلی خوبه
+                    اسم یارو خیلی خوبه و طولانی و لعنتی
                 </div>
             </div>
             <div class="graduate-container">
                 <div class="graduate-image">
-                    <img alt="grad photo" src="">
+                    <img alt="grad photo" src="../assets/testpic.svg">
                 </div>
                 <div class="graduate-name">
-                    اسم یارو خیلی خوبه
+                    اسم یارو خیلی خوبه و طولانی و لعنتی
                 </div>
             </div>
             <div class="graduate-container">
                 <div class="graduate-image">
-                    <img alt="grad photo" src="">
+                    <img alt="grad photo" src="../assets/testpic.svg">
                 </div>
                 <div class="graduate-name">
-                    اسم یارو خیلی خوبه
+                    اسم یارو خیلی خوبه و طولانی و لعنتی
                 </div>
             </div>
             <div class="graduate-container">
                 <div class="graduate-image">
-                    <img alt="grad photo" src="">
+                    <img alt="grad photo" src="../assets/testpic.svg">
                 </div>
                 <div class="graduate-name">
-                    اسم یارو خیلی خوبه
+                    اسم یارو خیلی خوبه و طولانی و لعنتی
                 </div>
             </div>
             <div class="graduate-container">
                 <div class="graduate-image">
-                    <img alt="grad photo" src="">
+                    <img alt="grad photo" src="../assets/testpic.svg">
                 </div>
                 <div class="graduate-name">
-                    اسم یارو خیلی خوبه
-                </div>
-            </div>
-            <div class="graduate-container">
-                <div class="graduate-image">
-                    <img alt="grad photo" src="">
-                </div>
-                <div class="graduate-name">
-                    اسم یارو خیلی خوبه
-                </div>
-            </div>
-            <div class="graduate-container">
-                <div class="graduate-image">
-                    <img alt="grad photo" src="">
-                </div>
-                <div class="graduate-name">
-                    اسم یارو خیلی خوبه
+                    اسم یارو خیلی خوبه و طولانی و لعنتی
                 </div>
             </div>
         </div>
@@ -140,9 +124,7 @@
 
     .graduate-container {
         width: 160px;
-        height: 210px;
         margin: 20px 5px 0 5px;
-        background-color: #12f123;
         border-radius: 10px;
         box-shadow: 0 5px 10px 0 $aut-grad-shadow;
     }
@@ -150,8 +132,7 @@
     .graduate-image {
         display: flex;
         justify-content: center;
-        align-items: center;
-        height: 160px;
+        min-height: 100px;
         width: 160px;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
