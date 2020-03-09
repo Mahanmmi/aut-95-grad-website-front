@@ -165,7 +165,6 @@
     @import "../../../public/colors";
 
     .content-wrapper {
-        justify-content: center;
         margin: 40px 70px 100px 70px;
     }
 

@@ -1,168 +1,172 @@
 <template>
-    <div class="content-wrapper">
-        <div class="my-word">
-            <div class="head">
-                <p class="title">از زبان من</p>
-                <i class="material-icons">
-                    keyboard_arrow_down
-                </i>
+    <div class="parent">
+        <div class="content-wrapper">
+            <div class="my-word">
+                <div class="head">
+                    <p class="title">از زبان من</p>
+                    <i class="material-icons">
+                        keyboard_arrow_down
+                    </i>
+                </div>
+                <div class="text-cards">
+                    <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                        متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                        کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                        از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                        سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                        کاربردی می باشد</p>
+                </div>
             </div>
-            <div class="text-cards">
-                <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
-                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
-                    از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                    سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
-                    کاربردی می باشد</p>
-            </div>
-        </div>
-        <div class="your-word">
-            <div class="head">
-                <p class="title">از زبان شما</p>
-                <i class="material-icons">
-                    keyboard_arrow_down
-                </i>
-            </div>
-            <div class="comments-wrapper">
+            <div class="your-word">
+                <div class="head">
+                    <p class="title">از زبان شما</p>
+                    <i class="material-icons">
+                        keyboard_arrow_down
+                    </i>
+                </div>
+                <div class="comments-wrapper">
 
 
-                <div class="each-comment-wrapper" v-for="comment in comments" v-bind:key="comment.index">
-                    <div class="right" v-if="windowWidth>770">
-                        <div class="profile-pic-wrapper">
-                            "../../assets/testpic.svg"
-                            <!--                            <img class="profile-pic" v-bind:src="comment.profilePicUrl" alt="عکس">-->
-                            <img class="profile-pic" src="../../assets/testpic.svg"
-                                 alt="عکس">
+                    <div class="each-comment-wrapper" v-for="comment in comments" v-bind:key="comment.index">
+                        <div class="right" v-if="windowWidth>770">
+                            <div class="profile-pic-wrapper">
+                                "../../assets/testpic.svg"
+                                <!--                            <img class="profile-pic" v-bind:src="comment.profilePicUrl" alt="عکس">-->
+                                <img class="profile-pic" src="../../assets/testpic.svg"
+                                     alt="عکس">
 
-                        </div>
-                    </div>
-                    <div class="left" v-if="windowWidth>770">
-                        <div class="comment-cards">
-                            <div class="comment-title">
-                                <div>
-                                    <p>{{comment.name}} | <b>{{comment.title}}</b></p>
-                                </div>
-                                <div class="details">
-                                    <button class="verify-comment" v-if="verifiedUser">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
-                                            <path
-                                                d="M6.62104 16.002C6.42529 16.23 6.33004 16.5202 6.35329 16.8202C6.37654 17.1202 6.51454 17.3932 6.74329 17.5882L12.2955 22.3477C12.5018 22.524 12.7575 22.6185 13.026 22.6185C13.059 22.6185 13.0928 22.617 13.1265 22.614C13.4303 22.587 13.704 22.4422 13.8975 22.2075L23.394 10.6492C23.5845 10.4167 23.6738 10.1242 23.6445 9.82495C23.6145 9.5257 23.4713 9.2557 23.2388 9.06445L21.5003 7.63645C21.021 7.24345 20.3115 7.31245 19.917 7.7917L12.6083 16.6875L9.67129 14.1712C9.20029 13.7692 8.48929 13.8225 8.08504 14.2935L6.62104 16.002Z"
-                                                fill="#9E8B4D"/>
-                                        </svg>
-                                    </button>
-
-
-                                    <button class="verify-comment" v-if="verifiedUser">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
-                                            <g clip-path="url(#clip0)">
-                                                <path
-                                                    d="M8.25 21.75C8.25 22.9903 9.25908 24 10.5 24H19.5C20.7409 24 21.75 22.9903 21.75 21.75V10.5H8.25V21.75Z"
-                                                    fill="#9E8B4D"/>
-                                                <path
-                                                    d="M17.25 7.12499V6H12.75V7.12499H7.125V9.37497H22.875V7.12499H17.25Z"
-                                                    fill="#9E8B4D"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0">
-                                                    <rect x="6" y="6" width="18" height="18" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-
-                                    </button>
-
-                                    <p>{{comment.date}}</p>
-                                </div>
                             </div>
-                            <div class="horizontal-line"></div>
-                            <div class="comment">
-                                <div v-bind:class="[comment.textPicUrl!== '' ? 'comment-text-wrapper': '']">
-                                    <p>{{comment.text}}</p>
-                                </div>
-
-                                <div class="picture-wrapper" v-if="comment.textPicUrl!=='' ">
-
-                                    <!--                                    <img class="comment-pic" v-bind:src="comment.textPicUrl" alt="عکس">-->
-                                    <img class="comment-pic" src="../../assets/realMadrid.svg" alt="عکس">
-
-                                </div>
-                            </div>
-
                         </div>
+                        <div class="left" v-if="windowWidth>770">
+                            <div class="comment-cards">
+                                <div class="comment-title">
+                                    <div>
+                                        <p>{{comment.name}} | <b>{{comment.title}}</b></p>
+                                    </div>
+                                    <div class="details">
+                                        <button class="verify-comment" v-if="verifiedUser">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
+                                                <path
+                                                        d="M6.62104 16.002C6.42529 16.23 6.33004 16.5202 6.35329 16.8202C6.37654 17.1202 6.51454 17.3932 6.74329 17.5882L12.2955 22.3477C12.5018 22.524 12.7575 22.6185 13.026 22.6185C13.059 22.6185 13.0928 22.617 13.1265 22.614C13.4303 22.587 13.704 22.4422 13.8975 22.2075L23.394 10.6492C23.5845 10.4167 23.6738 10.1242 23.6445 9.82495C23.6145 9.5257 23.4713 9.2557 23.2388 9.06445L21.5003 7.63645C21.021 7.24345 20.3115 7.31245 19.917 7.7917L12.6083 16.6875L9.67129 14.1712C9.20029 13.7692 8.48929 13.8225 8.08504 14.2935L6.62104 16.002Z"
+                                                        fill="#9E8B4D"/>
+                                            </svg>
+                                        </button>
 
-                    </div>
 
+                                        <button class="verify-comment" v-if="verifiedUser">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
+                                                <g clip-path="url(#clip0)">
+                                                    <path
+                                                            d="M8.25 21.75C8.25 22.9903 9.25908 24 10.5 24H19.5C20.7409 24 21.75 22.9903 21.75 21.75V10.5H8.25V21.75Z"
+                                                            fill="#9E8B4D"/>
+                                                    <path
+                                                            d="M17.25 7.12499V6H12.75V7.12499H7.125V9.37497H22.875V7.12499H17.25Z"
+                                                            fill="#9E8B4D"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0">
+                                                        <rect x="6" y="6" width="18" height="18" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
 
-                    <div class="left" v-if="windowWidth<=770">
-                        <div class="comment-cards">
-                            <div class="comment-title">
-                                <div class="details">
-                                    <p>{{comment.name}} | <b>{{comment.title}}</b></p>
-                                    <div class="right" v-if="windowWidth<=770">
-                                        <div class="profile-pic-wrapper">
-                                            "../../assets/testpic.svg"
-                                            <!--                            <img class="profile-pic" v-bind:src="comment.profilePicUrl" alt="عکس">-->
-                                            <img class="profile-pic" src="../../assets/testpic.svg"
-                                                 alt="عکس">
+                                        </button>
 
-                                        </div>
+                                        <p>{{comment.date}}</p>
                                     </div>
                                 </div>
-                                <div class="details">
-                                    <button class="verify-comment" v-if="verifiedUser">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
-                                            <path
-                                                d="M6.62104 16.002C6.42529 16.23 6.33004 16.5202 6.35329 16.8202C6.37654 17.1202 6.51454 17.3932 6.74329 17.5882L12.2955 22.3477C12.5018 22.524 12.7575 22.6185 13.026 22.6185C13.059 22.6185 13.0928 22.617 13.1265 22.614C13.4303 22.587 13.704 22.4422 13.8975 22.2075L23.394 10.6492C23.5845 10.4167 23.6738 10.1242 23.6445 9.82495C23.6145 9.5257 23.4713 9.2557 23.2388 9.06445L21.5003 7.63645C21.021 7.24345 20.3115 7.31245 19.917 7.7917L12.6083 16.6875L9.67129 14.1712C9.20029 13.7692 8.48929 13.8225 8.08504 14.2935L6.62104 16.002Z"
-                                                fill="#9E8B4D"/>
-                                        </svg>
-                                    </button>
+                                <div class="horizontal-line"></div>
+                                <div class="comment">
+                                    <div v-bind:class="[comment.textPicUrl!== '' ? 'comment-text-wrapper': '']">
+                                        <p>{{comment.text}}</p>
+                                    </div>
 
+                                    <div class="picture-wrapper" v-if="comment.textPicUrl!=='' ">
 
-                                    <button class="verify-comment" v-if="verifiedUser">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
-                                            <g clip-path="url(#clip0)">
-                                                <path
-                                                    d="M8.25 21.75C8.25 22.9903 9.25908 24 10.5 24H19.5C20.7409 24 21.75 22.9903 21.75 21.75V10.5H8.25V21.75Z"
-                                                    fill="#9E8B4D"/>
-                                                <path
-                                                    d="M17.25 7.12499V6H12.75V7.12499H7.125V9.37497H22.875V7.12499H17.25Z"
-                                                    fill="#9E8B4D"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0">
-                                                    <rect x="6" y="6" width="18" height="18" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
+                                        <!--                                    <img class="comment-pic" v-bind:src="comment.textPicUrl" alt="عکس">-->
+                                        <img class="comment-pic" src="../../assets/realMadrid.svg" alt="عکس">
 
-                                    </button>
-
-                                    <p>{{comment.date}}</p>
-                                </div>
-                            </div>
-                            <div class="horizontal-line"></div>
-                            <div class="comment">
-                                <div v-bind:class="[comment.textPicUrl!== '' ? 'comment-text-wrapper': '']">
-                                    <p>{{comment.text}}</p>
+                                    </div>
                                 </div>
 
-                                <div class="picture-wrapper" v-if="comment.textPicUrl!=='' ">
-
-                                    <!--                                    <img class="comment-pic" v-bind:src="comment.textPicUrl" alt="عکس">-->
-                                    <img class="comment-pic" src="../../assets/realMadrid.svg" alt="عکس">
-
-                                </div>
                             </div>
 
                         </div>
+
+
+                        <div class="left" v-if="windowWidth<=770">
+                            <div class="comment-cards">
+                                <div class="comment-title">
+                                    <div class="details">
+                                        <p>{{comment.name}} | <b>{{comment.title}}</b></p>
+                                        <div class="right" v-if="windowWidth<=770">
+                                            <div class="profile-pic-wrapper">
+                                                "../../assets/testpic.svg"
+                                                <!--                            <img class="profile-pic" v-bind:src="comment.profilePicUrl" alt="عکس">-->
+                                                <img class="profile-pic" src="../../assets/testpic.svg"
+                                                     alt="عکس">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="details">
+                                        <button class="verify-comment" v-if="verifiedUser">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
+                                                <path
+                                                        d="M6.62104 16.002C6.42529 16.23 6.33004 16.5202 6.35329 16.8202C6.37654 17.1202 6.51454 17.3932 6.74329 17.5882L12.2955 22.3477C12.5018 22.524 12.7575 22.6185 13.026 22.6185C13.059 22.6185 13.0928 22.617 13.1265 22.614C13.4303 22.587 13.704 22.4422 13.8975 22.2075L23.394 10.6492C23.5845 10.4167 23.6738 10.1242 23.6445 9.82495C23.6145 9.5257 23.4713 9.2557 23.2388 9.06445L21.5003 7.63645C21.021 7.24345 20.3115 7.31245 19.917 7.7917L12.6083 16.6875L9.67129 14.1712C9.20029 13.7692 8.48929 13.8225 8.08504 14.2935L6.62104 16.002Z"
+                                                        fill="#9E8B4D"/>
+                                            </svg>
+                                        </button>
+
+
+                                        <button class="verify-comment" v-if="verifiedUser">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
+                                                <g clip-path="url(#clip0)">
+                                                    <path
+                                                            d="M8.25 21.75C8.25 22.9903 9.25908 24 10.5 24H19.5C20.7409 24 21.75 22.9903 21.75 21.75V10.5H8.25V21.75Z"
+                                                            fill="#9E8B4D"/>
+                                                    <path
+                                                            d="M17.25 7.12499V6H12.75V7.12499H7.125V9.37497H22.875V7.12499H17.25Z"
+                                                            fill="#9E8B4D"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0">
+                                                        <rect x="6" y="6" width="18" height="18" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+
+                                        </button>
+
+                                        <p>{{comment.date}}</p>
+                                    </div>
+                                </div>
+                                <div class="horizontal-line"></div>
+                                <div class="comment">
+                                    <div v-bind:class="[comment.textPicUrl!== '' ? 'comment-text-wrapper': '']">
+                                        <p>{{comment.text}}</p>
+                                    </div>
+
+                                    <div class="picture-wrapper" v-if="comment.textPicUrl!=='' ">
+
+                                        <!--                                    <img class="comment-pic" v-bind:src="comment.textPicUrl" alt="عکس">-->
+                                        <img class="comment-pic" src="../../assets/realMadrid.svg" alt="عکس">
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
 
                     </div>
 
@@ -170,51 +174,50 @@
                 </div>
 
 
-            </div>
-
-
-            <div class="comments-wrapper">
-                <div class="each-comment-wrapper">
-                    <div class="right">
-                        <div class="profile-pic-wrapper">
-                            <img class="profile-pic" src="../../assets/testpic.svg" alt="عکس">
-                        </div>
-                    </div>
-                    <div class="left left-new-comment">
-                        <div class="comment-cards">
-                            <div class="comment-title">
-                                <input
-                                    type="text"
-                                    v-model="this.newComment.title"
-                                    placeholder="عنوان نظر..."
-                                />
+                <div class="comments-wrapper">
+                    <div class="each-comment-wrapper">
+                        <div class="right">
+                            <div class="profile-pic-wrapper">
+                                <img class="profile-pic" src="../../assets/testpic.svg" alt="عکس">
                             </div>
-                            <div class="horizontal-line"></div>
-                            <div class="comment">
-                                <div>
+                        </div>
+                        <div class="left left-new-comment">
+                            <div class="comment-cards left-new-comment">
+                                <div class="comment-title">
                                     <input
-                                        type="text"
-                                        v-model="this.newComment.text"
-                                        placeholder="تو هم نظر بده..."
+                                            type="text"
+                                            v-model="this.newComment.title"
+                                            placeholder="عنوان نظر..."
                                     />
                                 </div>
+                                <div class="horizontal-line"></div>
+                                <div class="comment">
+                                    <div>
+                                        <input
+                                                type="text"
+                                                v-model="this.newComment.text"
+                                                placeholder="تو هم نظر بده..."
+                                        />
+                                    </div>
 
+                                </div>
+
+                            </div>
+                            <div class="button-wrapper">
+                                <button id="submit">ثبت نظر</button>
+
+                                <div class="upload-btn-wrapper">
+                                    <button class="btn">انتخاب عکس</button>
+                                    <input type="file" @change="onFileSelected"/>
+                                </div>
                             </div>
 
                         </div>
-                        <div class="button-wrapper">
-                            <button id="submit">ثبت نظر</button>
-
-                            <div class="upload-btn-wrapper">
-                                <button class="btn">انتخاب عکس</button>
-                                <input type="file" @change="onFileSelected"/>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-            </div>
 
+
+            </div>
 
         </div>
 
@@ -302,9 +305,14 @@
 <style lang="scss" scoped>
     @import "public/colors";
 
+    .parent{
+        margin-top: 10px;
+    }
     .content-wrapper {
         justify-content: center;
-        margin: 30px 0px 100px 0px;
+        margin: 0 0px 100px 0px;
+        position: relative;
+        top: 4vw;
     }
 
     .card-wrapper {
@@ -315,7 +323,7 @@
 
     .text-cards {
         background-color: white;
-        margin: 30px;
+        margin: 0 30px 30px 30px;
         border-radius: 10px;
         box-shadow: 0px 8px 8px $aut-grad-shadow;
         padding: 20px;
@@ -323,7 +331,7 @@
     }
 
     .head {
-        margin: 30px;
+        margin: 0  30px 30px 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
         box-shadow: 0px 8px 8px $aut-grad-shadow;
@@ -356,7 +364,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .comments-wrapper {
@@ -414,7 +422,7 @@
         background-color: $aut-grad-secondary;
         justify-self: stretch;
         width: 50%;
-        margin: 20px 0 20px 0;
+        margin: 0px 0 20px 0;
     }
 
     .comment {
@@ -466,7 +474,7 @@
         justify-content: space-around;
         align-items: center;
         justify-self: left;
-        margin: 30px 0 30px 0;
+        margin: 0px 0 30px 0;
     }
 
     #submit {
@@ -535,7 +543,10 @@
     }
 
     .details p {
-        margin-top: 5px;
+        margin-top: 0px;
+    }
+    .left-new-comment{
+        margin-bottom: 20px;
     }
 
 
@@ -546,13 +557,13 @@
             margin: 0;
         }
         .head {
-            margin: 20px 0 20px 0;
+            margin: 0px 0 20px 0;
         }
         .text-cards {
-            margin: 20px 0 20px 0;
+            margin: 0px 0 20px 0;
         }
         .comments-wrapper {
-            margin: 20px 0 20px 0;
+            margin: 0px 0 20px 0;
         }
         .details {
             display: flex;
@@ -587,7 +598,7 @@
         }
 
         .picture-wrapper {
-            margin: 10px 0 10px 0;
+            margin: 0px 0 10px 0;
             width: 100%;
         }
 
@@ -596,7 +607,7 @@
         }
 
         .verify-comment {
-            margin-top: 10px;
+            margin-top: 0px;
         }
 
     }
