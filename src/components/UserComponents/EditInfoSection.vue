@@ -177,14 +177,14 @@
         background-color: white;
         margin: 30px;
         border-radius: 10px;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow:0px 8px 8px $aut-grad-shadow;
     }
 
     .head {
         margin: 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow:0px 8px 8px $aut-grad-shadow;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -325,7 +325,7 @@
         background-color: white;
         margin: 30px;
         border-radius: 10px;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow:0px 8px 8px $aut-grad-shadow;
     }
 
 
