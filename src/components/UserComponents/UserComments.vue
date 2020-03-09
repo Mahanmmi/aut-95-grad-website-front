@@ -412,11 +412,66 @@
     .verify-comment:hover{
         opacity: 0.5;
     }
+    .details p{
+        margin-top:5px;
+    }
 
 
     @media only screen and (max-width: 768px) {
-        .comment-wrapper {
+        .content-wrapper{
             width: 80%;
+            padding: 0;
+            margin: 0;
         }
+        .head{
+            margin: 20px 0 20px 0;
+        }
+        .text-cards{
+            margin: 20px 0 20px 0;
+        }
+        .comments-wrapper{
+            margin: 20px 0 20px 0;
+        }
+        .details{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: left;
+        }
+        .each-comment-wrapper{
+            flex-direction: column;
+        }
+        .left{
+            width: 100%;
+        }
+        .right{
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            margin-bottom: 10px;
+        }
+
+        .profile-pic-wrapper {
+            width: 15vw;
+            height: 15vw;
+            border: 0.5px solid $aut-grad-secondary;
+        }
+
+        .comment{
+            flex-direction: column;
+        }
+
+        .comment-text-wrapper {
+            width: 100%;
+        }
+
+        .picture-wrapper {
+            margin: 10px 0 10px 0;
+            width: 100%;
+        }
+
+        .comment-pic {
+            float: none;
+        }
+
     }
 </style>
