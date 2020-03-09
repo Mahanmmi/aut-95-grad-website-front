@@ -6,6 +6,7 @@ import ShortAnswerQuestions from "../View/ShortAnswerQuestions";
 import Graduates from "@/View/Graduates";
 import User from "@/View/User";
 import EditInfoSection from "@/components/UserComponents/EditInfoSection";
+import UserComments from "../components/UserComponents/UserComments";
 import Vote from "@/View/Vote";
 
 Vue.use(VueRouter);
@@ -45,6 +46,11 @@ const routes = [
                 path: '/user/edit',
                 name: 'userEdit',
                 component: EditInfoSection
+            },
+            {
+                path: '/user/:name',
+                name: 'eachUserPage',
+                component: UserComments
             }
         ]
     }

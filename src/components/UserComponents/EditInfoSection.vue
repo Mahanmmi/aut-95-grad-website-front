@@ -177,14 +177,14 @@
         background-color: white;
         margin: 30px;
         border-radius: 10px;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow:0px 8px 8px $aut-grad-shadow;
     }
 
     .head {
         margin: 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow:0px 8px 8px $aut-grad-shadow;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -325,12 +325,13 @@
         background-color: white;
         margin: 30px;
         border-radius: 10px;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow:0px 8px 8px $aut-grad-shadow;
     }
 
 
 
     @media only screen and (max-width: 1200px) {
+
         .top{
             flex-direction: column;
             justify-content: center;
@@ -348,6 +349,42 @@
         .fields-wrapper-bottom{
             flex-direction: column;
             justify-content: center;
+        }
+
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        .fields-wrapper-top{
+            font-size: 12px;
+            margin: 20px 0 20px 0;
+        }
+        .fields-wrapper-bottom{
+            font-size: 10px;
+            margin: 20px 0 20px 0;
+        }
+        .head{
+            margin: 20px 0 20px 0;
+        }
+
+        .title{
+            font-size: 15px;
+        }
+        .content-wrapper {
+            width: 80%;
+            margin: 0;
+            padding: 0;
+        }
+        label{
+            left: 0;
+            right: 0;
+        }
+        #label-firstName{
+            right: 0px;
+        }
+
+        #label-lastName{
+            right: 0px;
         }
     }
 </style>
