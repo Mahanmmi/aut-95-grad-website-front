@@ -514,6 +514,7 @@
         display: flex;
         flex-direction: row;
         justify-content: left;
+        align-items: center;
     }
 
     .verify-comment {
