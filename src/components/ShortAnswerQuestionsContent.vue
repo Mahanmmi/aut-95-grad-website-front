@@ -138,6 +138,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 20px;
     }
     .button-wrapper button{
         padding: 15px;
@@ -150,11 +153,13 @@
         background-color: $aut-grad-secondary;
         color: white;
         border: 2px solid $aut-grad-secondary;
+        box-shadow: 10px 10px 5px $aut-grad-shadow;
     }
     #cancel{
         background-color: white;
         color: $aut-grad-secondary;
         border: 4px solid $aut-grad-secondary;
+        box-shadow: 10px 10px 5px $aut-grad-shadow;
     }
 
     @media only screen and (max-width: 1200px) {

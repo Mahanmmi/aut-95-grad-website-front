@@ -1,6 +1,9 @@
 <template>
     <div class="profile-wrapper">
-        <section class="profile">
+        <section
+            class="profile"
+            :class="{'stick-top': isEditing}"
+        >
             <div class="profile-pic-wrapper">
                 <img class="profile-pic" src="../../assets/testpic.svg" alt="pic">
             </div>
@@ -24,8 +27,10 @@
                         </div>
                     </div>
                     <div class="divider"/>
-                    <router-link tag="button" to="/voting" v-if="!isMe" class="big-full-button">تو هم رای بده</router-link>
-                    <router-link tag="button" to="/user/edit" v-else class="big-full-button">ویرایش اطلاعات</router-link>
+                    <router-link tag="button" to="/voting" v-if="!isMe" class="big-full-button">تو هم رای بده
+                    </router-link>
+                    <router-link tag="button" to="/user/edit" v-else class="big-full-button">ویرایش اطلاعات
+                    </router-link>
                 </div>
                 <div v-else class="shifting-wrapper">
                     <div class="small-button">
@@ -219,6 +224,12 @@
     .profile {
         min-height: 400px;
         text-align: center;
+    }
+
+    .stick-top {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 110px;
     }
 
     .profile-pic-wrapper {

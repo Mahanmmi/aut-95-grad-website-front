@@ -24,6 +24,7 @@
                     </div>
                 </div>
             </section>
+            <div class="submit-button">ثبت رای</div>
         </div>
     </div>
 </template>
@@ -158,6 +159,28 @@
 
     .human:hover {
         background-color: #eeeeee;
+    }
+
+    .submit-button {
+        color: white;
+        border-radius: 10px;
+        border: none;
+        width: 40%;
+        padding: 10px;
+        text-align: center;
+        background-color: $aut-grad-secondary;
+        font-weight: bold;
+        font-size: x-large;
+        cursor: pointer;
+        margin: 17px 0;
+        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 20px;
+    }
+
+    .submit-button:hover {
+        background-color: $aut-grad-secondary-dark;
     }
 
     @media only screen and (max-width: 768px) {
