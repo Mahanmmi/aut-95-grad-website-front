@@ -40,11 +40,15 @@
             </div>
         </section>
         <section v-if="!isEditing" class="short-answer-wrapper">
-            <p class="short-answer" v-for="sa in shortAnswers" :key="sa.question">
-                <span class="question">{{sa.question}}</span>
-                <span class="text-divider"> | </span>
-                <span class="answer">{{sa.answer}}</span>
-            </p>
+            <div>
+                <p class="short-answer" v-for="sa in shortAnswers" :key="sa.question">
+                    <span class="question">{{sa.question}}</span>
+                    <span class="text-divider"> | </span>
+                    <span class="answer">{{sa.answer}}</span>
+                </p>
+            </div>
+            <div class="divider"/>
+            <button class="big-full-button">ویرایش پاسخ ها</button>
         </section>
     </div>
 </template>
@@ -372,6 +376,7 @@
     .short-answer-wrapper {
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
         min-height: 100px;
         border-radius: 10px;
