@@ -1,36 +1,20 @@
 <template>
-    <div class="dotted-background">
+    <div >
         <div class="content-wrapper">
             <div class="explanation-wrapper">
                 <h2>سوالات کوتاه‌پاسخ</h2>
                 <p>ﺎﺑ ﯽﻣ یدﺮﺑرﺎﮐ یﺎﻫراﺰﺑا دﻮﺒﻬﺑ فﺪﻫ ﺎﺑ عﻮﻨﺘﻣ یﺎﻫدﺮﺑرﺎﮐ و زﺎﯿﻧ درﻮﻣ یژﻮﻟﻮﻨﮑﺗ ﯽﻠﻌﻓ ﻂﯾاﺮﺷ یاﺮﺑ و ﺖﺳا مزﺎﻟ ﻪﮐ نﺎﻨﭽﻧآﺮﻄﺳ و نﻮﺘﺳ رد ﻪﻠﺠﻣ و ﻪﻣﺎﻧزور ﻪﮑﻠﺑ نﻮﺘﻣ و ﺎﻫﺮﮕﭘﺎﭼ .ﺖﺳا ﮏﯿﻓاﺮﮔ نﺎﺣاﺮﻃ زا هدﺎﻔﺘﺳا ﺎﺑ و پﺎﭼ ﺖﻌﻨﺻ زا مﻮﻬﻔﻣﺎﻧ ﯽﮔدﺎﺳ ﺪﯿﻟﻮﺗ ﺎﺑ ﯽﮕﺘﺧﺎﺳ ﻦﺘﻣ مﻮﺴﭙﯾا مرﻮﻟ.ﺪﺷﺎﺑ ﯽﻣ یدﺮﺑرﺎﮐ یﺎﻫراﺰﺑا دﻮﺒﻬﺑ فﺪﻫ ﺎﺑ عﻮﻨﺘﻣ یﺎﻫدﺮﺑرﺎﮐ و زﺎﯿﻧ درﻮﻣ یژﻮﻟﻮﻨﮑﺗ ﯽﻠﻌﻓ ﻂﯾاﺮﺷ یاﺮﺑ و ﺖﺳا مزﺎﻟ ﻪﮐ نﺎﻨﭽﻧآﺮﻄﺳ و نﻮﺘﺳ رد ﻪﻠﺠﻣ و ﻪﻣﺎﻧزور ﻪﮑﻠﺑ نﻮﺘﻣ و ﺎﻫﺮﮕﭘﺎﭼ .ﺖﺳا ﮏﯿﻓاﺮﮔ نﺎﺣاﺮﻃ زا هدﺎﻔﺘﺳا ﺎﺑ و پﺎﭼ ﺖﻌﻨﺻ زا مﻮﻬﻔﻣﺎﻧ ﯽﮔدﺎﺳ ﺪﯿﻟﻮﺗ ﺎﺑ ﯽﮕﺘﺧﺎﺳ ﻦﺘﻣ مﻮﺴﭙﯾا مرﻮ </p>
             </div>
-            <div class="form-wrapper">
-                <div class="single-question">
-                    <label class="label" for="name">اسمت چیه؟</label>
+            <div class="form-wrapper" >
+                <div class="single-question" v-for="question in this.questions" v-bind:key="question">
+                    <label class="label" >{{question.text}}
                     <input
-                            id="name"
                             type="text"
-                            v-model="this.answer.name"
+                            v-model="question.ans"
                     />
-                </div>
-                <div class="single-question">
-                    <label class="label" for="livingPlace">کجا زندگی میکنی؟</label>
-                    <input
-                            id="livingPlace"
-                            type="text"
-                            v-model="this.answer.livingPlace"
-                    />
+                    </label>
                 </div>
 
-                <div class="single-question">
-                    <label class="label" for="childNumber">چند تا بچه داری؟</label>
-                    <input
-                            id="childNumber"
-                            type="text"
-                            v-model="this.answer.childNumber"
-                    />
-                </div>
             </div>
 
             <div class="button-wrapper">
@@ -52,7 +36,57 @@
                     name: "",
                     childNumber: "",
                     livingPlace: ""
-                }
+                },
+                questions:[
+                    {
+                        text: "من یه پرندم",
+                        ans: ""
+                    },
+                    {
+                        text: "آرزو دارم",
+                        ans: ""
+                    },
+                    {
+                        text: "کنارم باشی",
+                        ans: ""
+                    },
+                    {
+                        text: "من یه پرندم",
+                        ans: ""
+                    },
+                    {
+                        text: "آرزو دارم",
+                        ans: ""
+                    },
+                    {
+                        text: "کنارم باشی",
+                        ans: ""
+                    },
+                    {
+                        text: "من یه پرندم",
+                        ans: ""
+                    },
+                    {
+                        text: "آرزو دارم",
+                        ans: ""
+                    },
+                    {
+                        text: "کنارم باشی",
+                        ans: ""
+                    },
+                    {
+                        text: "من یه پرندم",
+                        ans: ""
+                    },
+                    {
+                        text: "آرزو دارم",
+                        ans: ""
+                    },
+                    {
+                        text: "کنارم باشی",
+                        ans: ""
+                    }
+                ]
             }
         }
     }
@@ -61,23 +95,7 @@
 <style lang="scss" scoped>
     @import "public/colors";
 
-    .dotted-background {
-        // Dot Colors
-        $dot-bg-color: #e5e5e5;
-        $dot-color: #d8d8d8;
-        // Dot Dimensions
-        $dot-size: 3px;
-        $dot-space: 35px;
-        background-image: radial-gradient($dot-color $dot-size, $dot-bg-color $dot-size);
-        background-size: $dot-space $dot-space;
-        margin: 0 0 0 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        min-height: calc(100vh - 50px);
-    }
+
 
     .content-wrapper {
         display: flex;
@@ -100,7 +118,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 50px;
         background-color: white;
         color: $aut-grad-primary;
         margin-top: 30px;
@@ -114,17 +131,19 @@
         color: $aut-grad-secondary;
         font-weight: bold;
         margin-top: 20px;
+        width: 100%;
     }
 
     input {
-        width: 100%;
         border: 0;
         outline: 0;
         padding: 0.5rem 0;
         border-bottom: 3px solid $aut-grad-secondary;
         box-shadow: none;
         color: #111;
-        max-width: 80%;
+        width: 70%;
+        margin-right: 30px;
+
     }
 
     .single-question {
@@ -132,6 +151,7 @@
         flex-direction: row;
         justify-content: space-between;
         margin: 0 0 40px 0;
+        width: 100%;
     }
     .button-wrapper{
         margin-top: 30px;
@@ -166,5 +186,18 @@
         .content-wrapper{
             margin: 0;
         }
+
+    }
+    @media only screen and (max-width: 770px) {
+        .content-wrapper{
+            margin: 0;
+        }
+        label{
+            font-size: 14px;
+        }
+        input{
+            margin: 5px;
+        }
+
     }
 </style>

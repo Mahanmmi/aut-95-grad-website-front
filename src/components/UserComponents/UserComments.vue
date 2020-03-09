@@ -365,8 +365,8 @@
     .profile-pic-wrapper {
         display: inline-block;
         position: relative;
-        width: 6vw;
-        height: 6vw;
+        width: 5vw;
+        height: 5vw;
         border-radius: 50%;
         border: 2px solid $aut-grad-secondary;
         overflow: hidden;
