@@ -39,24 +39,29 @@
                     <div class="left" v-if="windowWidth>770">
                         <div class="comment-cards">
                             <div class="comment-title">
-                                <div >
+                                <div>
                                     <p>{{comment.name}} | <b>{{comment.title}}</b></p>
                                 </div>
                                 <div class="details">
                                     <button class="verify-comment" v-if="verifiedUser">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
-                                            <path d="M6.62104 16.002C6.42529 16.23 6.33004 16.5202 6.35329 16.8202C6.37654 17.1202 6.51454 17.3932 6.74329 17.5882L12.2955 22.3477C12.5018 22.524 12.7575 22.6185 13.026 22.6185C13.059 22.6185 13.0928 22.617 13.1265 22.614C13.4303 22.587 13.704 22.4422 13.8975 22.2075L23.394 10.6492C23.5845 10.4167 23.6738 10.1242 23.6445 9.82495C23.6145 9.5257 23.4713 9.2557 23.2388 9.06445L21.5003 7.63645C21.021 7.24345 20.3115 7.31245 19.917 7.7917L12.6083 16.6875L9.67129 14.1712C9.20029 13.7692 8.48929 13.8225 8.08504 14.2935L6.62104 16.002Z" fill="#9E8B4D"/>
+                                            <path d="M6.62104 16.002C6.42529 16.23 6.33004 16.5202 6.35329 16.8202C6.37654 17.1202 6.51454 17.3932 6.74329 17.5882L12.2955 22.3477C12.5018 22.524 12.7575 22.6185 13.026 22.6185C13.059 22.6185 13.0928 22.617 13.1265 22.614C13.4303 22.587 13.704 22.4422 13.8975 22.2075L23.394 10.6492C23.5845 10.4167 23.6738 10.1242 23.6445 9.82495C23.6145 9.5257 23.4713 9.2557 23.2388 9.06445L21.5003 7.63645C21.021 7.24345 20.3115 7.31245 19.917 7.7917L12.6083 16.6875L9.67129 14.1712C9.20029 13.7692 8.48929 13.8225 8.08504 14.2935L6.62104 16.002Z"
+                                                  fill="#9E8B4D"/>
                                         </svg>
                                     </button>
 
 
                                     <button class="verify-comment" v-if="verifiedUser">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
                                             <g clip-path="url(#clip0)">
-                                                <path d="M8.25 21.75C8.25 22.9903 9.25908 24 10.5 24H19.5C20.7409 24 21.75 22.9903 21.75 21.75V10.5H8.25V21.75Z" fill="#9E8B4D"/>
-                                                <path d="M17.25 7.12499V6H12.75V7.12499H7.125V9.37497H22.875V7.12499H17.25Z" fill="#9E8B4D"/>
+                                                <path d="M8.25 21.75C8.25 22.9903 9.25908 24 10.5 24H19.5C20.7409 24 21.75 22.9903 21.75 21.75V10.5H8.25V21.75Z"
+                                                      fill="#9E8B4D"/>
+                                                <path d="M17.25 7.12499V6H12.75V7.12499H7.125V9.37497H22.875V7.12499H17.25Z"
+                                                      fill="#9E8B4D"/>
                                             </g>
                                             <defs>
                                                 <clipPath id="clip0">
@@ -87,13 +92,6 @@
                         </div>
 
                     </div>
-
-
-
-
-
-
-
 
 
                     <div class="left" v-if="windowWidth<=770">
@@ -113,19 +111,24 @@
                                 </div>
                                 <div class="details">
                                     <button class="verify-comment" v-if="verifiedUser">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
-                                            <path d="M6.62104 16.002C6.42529 16.23 6.33004 16.5202 6.35329 16.8202C6.37654 17.1202 6.51454 17.3932 6.74329 17.5882L12.2955 22.3477C12.5018 22.524 12.7575 22.6185 13.026 22.6185C13.059 22.6185 13.0928 22.617 13.1265 22.614C13.4303 22.587 13.704 22.4422 13.8975 22.2075L23.394 10.6492C23.5845 10.4167 23.6738 10.1242 23.6445 9.82495C23.6145 9.5257 23.4713 9.2557 23.2388 9.06445L21.5003 7.63645C21.021 7.24345 20.3115 7.31245 19.917 7.7917L12.6083 16.6875L9.67129 14.1712C9.20029 13.7692 8.48929 13.8225 8.08504 14.2935L6.62104 16.002Z" fill="#9E8B4D"/>
+                                            <path d="M6.62104 16.002C6.42529 16.23 6.33004 16.5202 6.35329 16.8202C6.37654 17.1202 6.51454 17.3932 6.74329 17.5882L12.2955 22.3477C12.5018 22.524 12.7575 22.6185 13.026 22.6185C13.059 22.6185 13.0928 22.617 13.1265 22.614C13.4303 22.587 13.704 22.4422 13.8975 22.2075L23.394 10.6492C23.5845 10.4167 23.6738 10.1242 23.6445 9.82495C23.6145 9.5257 23.4713 9.2557 23.2388 9.06445L21.5003 7.63645C21.021 7.24345 20.3115 7.31245 19.917 7.7917L12.6083 16.6875L9.67129 14.1712C9.20029 13.7692 8.48929 13.8225 8.08504 14.2935L6.62104 16.002Z"
+                                                  fill="#9E8B4D"/>
                                         </svg>
                                     </button>
 
 
                                     <button class="verify-comment" v-if="verifiedUser">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="15" cy="15" r="14.5" fill="white" stroke="#9E8B4D"/>
                                             <g clip-path="url(#clip0)">
-                                                <path d="M8.25 21.75C8.25 22.9903 9.25908 24 10.5 24H19.5C20.7409 24 21.75 22.9903 21.75 21.75V10.5H8.25V21.75Z" fill="#9E8B4D"/>
-                                                <path d="M17.25 7.12499V6H12.75V7.12499H7.125V9.37497H22.875V7.12499H17.25Z" fill="#9E8B4D"/>
+                                                <path d="M8.25 21.75C8.25 22.9903 9.25908 24 10.5 24H19.5C20.7409 24 21.75 22.9903 21.75 21.75V10.5H8.25V21.75Z"
+                                                      fill="#9E8B4D"/>
+                                                <path d="M17.25 7.12499V6H12.75V7.12499H7.125V9.37497H22.875V7.12499H17.25Z"
+                                                      fill="#9E8B4D"/>
                                             </g>
                                             <defs>
                                                 <clipPath id="clip0">
@@ -156,9 +159,6 @@
                         </div>
 
                     </div>
-
-
-
 
 
                 </div>
@@ -263,10 +263,13 @@
                 console.log(event);
                 this.newComment.picture = event.target.files[0];
             },
+            handleResize() {
+                this.windowWidth = window.innerWidth;
+            }
 
         },
-        computed:{
-            verifiedUser:function () {
+        computed: {
+            verifiedUser: function () {
                 return true;
                 //write something here that can verify if the logged in user is the
                 //owner of the page
@@ -274,10 +277,19 @@
 
         },
         mounted() {
-            window.onresize = () => {
-                this.windowWidth = window.innerWidth
-            }
-        }
+            // window.onresize = () => {
+            //     this.windowWidth = window.innerWidth
+            // }
+        },
+        created() {
+            window.addEventListener('resize', this.handleResize);
+            this.handleResize();
+        },
+        destroyed() {
+            window.removeEventListener('resize', this.handleResize);
+        },
+
+
     }
 </script>
 
@@ -382,7 +394,7 @@
 
     }
 
-    .comment-cards:hover{
+    .comment-cards:hover {
         box-shadow: 5px 15px 13px $aut-grad-shadow;
     }
 
@@ -451,7 +463,7 @@
         margin: 30px 0 30px 0;
     }
 
-    #submit{
+    #submit {
         padding: 15px;
         border-radius: 7px;
         font-size: 25px;
@@ -477,11 +489,12 @@
         font-size: 20px;
         font-weight: bold;
     }
-    button:hover{
+
+    button:hover {
         cursor: pointer;
     }
 
-    .upload-btn-wrapper input:hover{
+    .upload-btn-wrapper input:hover {
         cursor: pointer;
     }
 
@@ -493,52 +506,54 @@
         opacity: 0;
     }
 
-    .details{
+    .details {
         display: flex;
         flex-direction: row;
         justify-content: left;
     }
 
-    .verify-comment{
+    .verify-comment {
         background-color: white;
         border: none;
         margin-left: 10px;
     }
-    .verify-comment:hover{
+
+    .verify-comment:hover {
         opacity: 0.5;
     }
-    .details p{
-        margin-top:5px;
+
+    .details p {
+        margin-top: 5px;
     }
 
 
     @media only screen and (max-width: 770px) {
-        .content-wrapper{
+        .content-wrapper {
             width: 80%;
             padding: 0;
             margin: 0;
         }
-        .head{
+        .head {
             margin: 20px 0 20px 0;
         }
-        .text-cards{
+        .text-cards {
             margin: 20px 0 20px 0;
         }
-        .comments-wrapper{
+        .comments-wrapper {
             margin: 20px 0 20px 0;
         }
-        .details{
+        .details {
             display: flex;
             flex-direction: column-reverse;
             justify-content: start;
         }
-        .each-comment-wrapper{
+        .each-comment-wrapper {
             flex-direction: column;
         }
-        .left{
+        .left {
             width: 100%;
         }
-        .right{
+        .right {
             width: 100%;
             display: flex;
             justify-content: right;
@@ -551,7 +566,7 @@
             border: 0.5px solid $aut-grad-secondary;
         }
 
-        .comment{
+        .comment {
             flex-direction: column;
         }
 
@@ -568,7 +583,7 @@
             float: none;
         }
 
-        .verify-comment{
+        .verify-comment {
             margin-top: 10px;
         }
 
