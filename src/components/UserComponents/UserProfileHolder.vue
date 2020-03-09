@@ -309,7 +309,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        width: 60%;
+        /*width: 60%;*/
         background-color: $aut-grad-secondary;
         border-radius: 15px;
         height: 30px;
