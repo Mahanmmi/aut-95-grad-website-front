@@ -96,12 +96,11 @@
                         </div>
                         <div class="button-wrapper">
                             <button id="submit">ثبت نظر</button>
-                            <input
-                                    id="picSelector"
-                                    type="file"
-                                    @change="onFileSelected"
-                                    placeholder="آپلود عکس"
-                            >
+
+                            <div class="upload-btn-wrapper">
+                                <button class="btn">انتخاب عکس</button>
+                                <input type="file" @change="onFileSelected"/>
+                            </div>
                         </div>
 
                     </div>
@@ -340,16 +339,30 @@
         border: 2px solid $aut-grad-secondary;
     }
 
-    .button-wrapper input {
-        border-radius: 7px;
-        font-size: 15px;
-        font-weight: bold;
-        width: 90px;
-        height: 20px;
-        background-color: white;
-        color: $aut-grad-secondary;
-        border: 4px solid $aut-grad-secondary;
+    .upload-btn-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
     }
+
+    .btn {
+        border: 3px solid $aut-grad-secondary;
+        color: $aut-grad-secondary;
+        background-color: white;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .upload-btn-wrapper input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+
 
     @media only screen and (max-width: 768px) {
         .comment-wrapper {
