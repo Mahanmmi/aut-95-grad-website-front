@@ -193,12 +193,7 @@
 
     }
 
-    @media only screen and (max-width: 1200px) {
-        .content-wrapper{
-            margin: 0;
-        }
 
-    }
     @media only screen and (max-width: 770px) {
         .content-wrapper{
             margin: 0;
