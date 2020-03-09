@@ -110,6 +110,7 @@
         justify-content: center;
         padding-top: 10vh;
         padding-bottom: 10vh;
+        min-height: calc(100vh - 50px);
     }
 
     .graduates-wrapper {
@@ -118,7 +119,6 @@
         align-content: flex-start;
         flex-wrap: wrap;
         flex-direction: row-reverse;
-        min-height: calc(100vh - 50px);
         width: 70%;
     }
 
@@ -135,6 +135,7 @@
         padding: 5px;
         width: 100%;
         box-shadow: 0 5px 10px 0 $aut-grad-shadow;
+        box-sizing: border-box;
     }
 
     .graduate-container {
