@@ -1,138 +1,141 @@
 <template>
-    <div class="content-wrapper">
-        <div class="important-info">
-            <div class="head">
-                <p class="title">اطلاعات ضروری</p>
-                <i class="material-icons">
-                    keyboard_arrow_down
-                </i>
+    <div class="parent">
+        <div class="content-wrapper">
+            <div class="important-info">
+                <div class="head">
+                    <p class="title">اطلاعات ضروری</p>
+                    <i class="material-icons">
+                        keyboard_arrow_down
+                    </i>
+                </div>
+                <div class="fields-wrapper-top">
+                    <div class="top">
+                        <div class="right">
+                            <div class="single-field">
+                                <input
+                                        id="firstName"
+                                        type="text"
+                                        v-model="this.importantData.firstName"
+                                        placeholder=" "
+                                />
+                                <label for="firstName" id="label-firstName">نام</label>
+                            </div>
+                            <div class="single-field">
+                                <input
+                                        id="lastName"
+                                        type="text"
+                                        v-model="this.importantData.lastName"
+                                        placeholder=" "
+                                />
+                                <label for="lastName" id="label-lastName">نام خانوادگی</label>
+                            </div>
+                            <div class="single-field">
+                                <input
+                                        id="email"
+                                        type="text"
+                                        v-model="this.importantData.email"
+                                        placeholder="xx@xx.xx"
+                                />
+                                <label for="email">ایمیل</label>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="single-field">
+                                <input
+                                        id="userName"
+                                        type="text"
+                                        v-model="this.importantData.username"
+                                        placeholder=" "
+                                />
+                                <label for="userName">نام کاربری</label>
+                            </div>
+                            <div class="single-field">
+                                <input
+                                        id="birthDate"
+                                        type="text"
+                                        v-model="this.importantData.birthDate"
+                                        placeholder="**/**/**"
+                                />
+                                <label for="birthDate">تاریخ تولد</label>
+                            </div>
+                            <div class="single-field">
+                                <input
+                                        id="gender"
+                                        type="text"
+                                        v-model="this.importantData.gender"
+                                        placeholder=" "
+                                />
+                                <label for="gender">جنسیت</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="single-field">
+                            <input
+                                    id="about"
+                                    type="text"
+                                    v-model="this.importantData.about"
+                                    placeholder=" "
+                            />
+                            <label for="about">درباره من</label>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="fields-wrapper-top">
-                <div class="top">
+            <div class="not-important-info">
+                <div class="head">
+                    <p class="title">اطلاعات ‌نه‌چندان‌ضروری</p>
+                    <i class="material-icons">
+                        keyboard_arrow_down
+                    </i>
+                </div>
+                <div class="fields-wrapper-bottom">
                     <div class="right">
                         <div class="single-field">
                             <input
-                                    id="firstName"
+                                    id="telegram"
                                     type="text"
-                                    v-model="this.importantData.firstName"
+                                    v-model="this.unImportantData.telegram"
                                     placeholder=" "
                             />
-                            <label for="firstName" id="label-firstName">نام</label>
+                            <label for="firstName">تلگرام</label>
                         </div>
                         <div class="single-field">
                             <input
-                                    id="lastName"
+                                    id="tweeter"
                                     type="text"
-                                    v-model="this.importantData.lastName"
+                                    v-model="this.unImportantData.tweeter"
                                     placeholder=" "
                             />
-                            <label for="lastName" id="label-lastName">نام خانوادگی</label>
-                        </div>
-                        <div class="single-field">
-                            <input
-                                    id="email"
-                                    type="text"
-                                    v-model="this.importantData.email"
-                                    placeholder="xx@xx.xx"
-                            />
-                            <label for="email">ایمیل</label>
+                            <label for="lastName" >توییتر</label>
                         </div>
                     </div>
                     <div class="left">
                         <div class="single-field">
                             <input
-                                    id="userName"
+                                    id="instagram"
                                     type="text"
-                                    v-model="this.importantData.username"
+                                    v-model="this.unImportantData.instagram"
                                     placeholder=" "
                             />
-                            <label for="userName">نام کاربری</label>
+                            <label for="userName">اینستاگرام</label>
                         </div>
                         <div class="single-field">
                             <input
-                                    id="birthDate"
+                                    id="gitHub"
                                     type="text"
-                                    v-model="this.importantData.birthDate"
-                                    placeholder="**/**/**"
-                            />
-                            <label for="birthDate">تاریخ تولد</label>
-                        </div>
-                        <div class="single-field">
-                            <input
-                                    id="gender"
-                                    type="text"
-                                    v-model="this.importantData.gender"
+                                    v-model="this.unImportantData.gitHub"
                                     placeholder=" "
                             />
-                            <label for="gender">جنسیت</label>
+                            <label for="gitHub">گیت‌هاب</label>
                         </div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="single-field">
-                        <input
-                                id="about"
-                                type="text"
-                                v-model="this.importantData.about"
-                                placeholder=" "
-                        />
-                        <label for="about">درباره من</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="not-important-info">
-            <div class="head">
-                <p class="title">اطلاعات ‌نه‌چندان‌ضروری</p>
-                <i class="material-icons">
-                    keyboard_arrow_down
-                </i>
-            </div>
-            <div class="fields-wrapper-bottom">
-                <div class="right">
-                    <div class="single-field">
-                        <input
-                                id="telegram"
-                                type="text"
-                                v-model="this.unImportantData.telegram"
-                                placeholder=" "
-                        />
-                        <label for="firstName">تلگرام</label>
-                    </div>
-                    <div class="single-field">
-                        <input
-                                id="tweeter"
-                                type="text"
-                                v-model="this.unImportantData.tweeter"
-                                placeholder=" "
-                        />
-                        <label for="lastName" >توییتر</label>
-                    </div>
-                </div>
-                <div class="left">
-                    <div class="single-field">
-                        <input
-                                id="instagram"
-                                type="text"
-                                v-model="this.unImportantData.instagram"
-                                placeholder=" "
-                        />
-                        <label for="userName">اینستاگرام</label>
-                    </div>
-                    <div class="single-field">
-                        <input
-                                id="gitHub"
-                                type="text"
-                                v-model="this.unImportantData.gitHub"
-                                placeholder=" "
-                        />
-                        <label for="gitHub">گیت‌هاب</label>
-                    </div>
 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -165,7 +168,10 @@
     @import "../../../public/colors";
 
     .content-wrapper {
-        margin: 40px 70px 100px 70px;
+        margin-top: 3vw;
+    }
+    .parent{
+        margin-top: 10px;
     }
 
     .fields-wrapper-top {
@@ -174,13 +180,13 @@
         justify-content: center;
         padding: 50px 0;
         background-color: white;
-        margin: 30px;
+        margin: 0 30px 30px 30px;
         border-radius: 10px;
         box-shadow:0px 8px 8px $aut-grad-shadow;
     }
 
     .head {
-        margin: 30px;
+        margin: 0 30px 30px 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
         box-shadow:0px 8px 8px $aut-grad-shadow;
@@ -322,7 +328,7 @@
         justify-content: space-between;
         padding: 50px 0;
         background-color: white;
-        margin: 30px;
+        margin: 0 30px 30px 30px;
         border-radius: 10px;
         box-shadow:0px 8px 8px $aut-grad-shadow;
     }
@@ -356,21 +362,20 @@
 
         .fields-wrapper-top{
             font-size: 12px;
-            margin: 20px 0 20px 0;
+            margin: 0px 0 20px 0;
         }
         .fields-wrapper-bottom{
             font-size: 10px;
-            margin: 20px 0 20px 0;
+            margin: 0px 0 20px 0;
         }
         .head{
-            margin: 20px 0 20px 0;
+            margin: 0px 0 20px 0;
         }
 
         .title{
             font-size: 15px;
         }
         .content-wrapper {
-            width: 80%;
             margin: 0;
             padding: 0;
         }

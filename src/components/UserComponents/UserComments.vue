@@ -552,7 +552,6 @@
 
     @media only screen and (max-width: 770px) {
         .content-wrapper {
-            width: 80%;
             padding: 0;
             margin: 0;
         }
