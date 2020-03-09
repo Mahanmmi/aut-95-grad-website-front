@@ -7,6 +7,7 @@ import Graduates from "@/View/Graduates";
 import User from "@/View/User";
 import EditInfoSection from "@/components/UserComponents/EditInfoSection";
 import UserComments from "../components/UserComponents/UserComments";
+import Vote from "@/View/Vote";
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,11 @@ const routes = [
         path: '/graduates',
         name: 'graduates',
         component: Graduates
+    },
+    {
+        path: '/voting',
+        name: 'voting',
+        component: Vote
     },
     {
         path: '/user',

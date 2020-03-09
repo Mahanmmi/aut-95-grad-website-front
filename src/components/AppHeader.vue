@@ -16,10 +16,11 @@
                 فارغ‌التحصیلان
             </router-link>
             <router-link
-                to="/"
+                to="/voting"
                 class="main-link link"
+                exact-active-class="link-active"
             >
-                صفحه اول
+                رای‌گیری‌ها
             </router-link>
         </nav>
         <div v-if="!isFullBlue" class="logo-container">
