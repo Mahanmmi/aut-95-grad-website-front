@@ -48,7 +48,7 @@
                 </p>
             </div>
             <div class="divider"/>
-            <button class="big-full-button">ویرایش پاسخ ها</button>
+            <router-link tag="button" to="/short-answer-questions" class="big-full-button">ویرایش پاسخ ها</router-link>
         </section>
     </div>
 </template>
