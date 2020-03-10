@@ -269,7 +269,7 @@
         padding: 8vw 10px 20px;
         border-radius: 10px;
         background-color: $aut-grad-primary;
-        box-shadow: 10px 10px 10px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     }
 
     .user-data {
@@ -392,7 +392,7 @@
         min-height: 100px;
         border-radius: 10px;
         background-color: $aut-grad-primary;
-        box-shadow: 10px 10px 10px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         margin-top: 30px;
         box-sizing: border-box;
         padding: 15px 15px;

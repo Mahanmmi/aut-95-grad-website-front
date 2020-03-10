@@ -123,7 +123,7 @@
         margin-top: 30px;
         border-radius: 10px;
         position: relative;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         padding-top: 30px;
 
     }
@@ -176,13 +176,13 @@
         background-color: $aut-grad-secondary;
         color: white;
         border: 2px solid $aut-grad-secondary;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     }
     #cancel{
         background-color: white;
         color: $aut-grad-secondary;
         border: 4px solid $aut-grad-secondary;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     }
     .button-wrapper button:hover {
         cursor: pointer;

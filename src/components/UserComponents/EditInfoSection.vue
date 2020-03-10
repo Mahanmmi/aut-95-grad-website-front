@@ -182,14 +182,14 @@
         background-color: white;
         margin: 0 30px 30px 30px;
         border-radius: 10px;
-        box-shadow:0px 8px 8px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     }
 
     .head {
         margin: 0 30px 30px 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
-        box-shadow:0px 8px 8px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -330,7 +330,7 @@
         background-color: white;
         margin: 0 30px 30px 30px;
         border-radius: 10px;
-        box-shadow:0px 8px 8px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     }
 
 

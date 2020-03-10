@@ -108,11 +108,11 @@
         background-color: $aut-grad-primary;
         color: $aut-grad-secondary;
         font-weight: bold;
-        font-size: x-large;
+        font-size: large;
     }
 
     .header-shadow {
-        box-shadow: 0 0 10px 10px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     }
 
     .main-menu-wrapper {

@@ -324,7 +324,7 @@
         background-color: white;
         margin: 0 30px 30px 30px;
         border-radius: 10px;
-        box-shadow: 0px 8px 8px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         padding: 20px;
         text-align: right;
     }
@@ -333,7 +333,7 @@
         margin: 0  30px 30px 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
-        box-shadow: 0px 8px 8px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -383,7 +383,7 @@
         border: 2px solid $aut-grad-secondary;
         overflow: hidden;
         z-index: 2;
-        box-shadow: 0px 8px 8px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 
     }
 
@@ -399,7 +399,7 @@
     .comment-cards {
         background-color: white;
         border-radius: 10px;
-        box-shadow: 0px 8px 8px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         padding: 20px;
         text-align: right;
         margin-right: 10px;
@@ -407,7 +407,7 @@
     }
 
     .comment-cards:hover {
-        box-shadow: 5px 15px 13px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     }
 
     .comment-title {
@@ -489,7 +489,7 @@
 
     #submit:hover {
         background-color: $aut-grad-secondary-dark;
-        box-shadow: 0px 3px 5px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     }
 
     .upload-btn-wrapper {

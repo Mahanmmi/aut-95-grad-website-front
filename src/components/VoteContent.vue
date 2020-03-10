@@ -97,7 +97,7 @@
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
-        width: 50%;
+        width: 60%;
     }
 
     .vote-desc-wrapper {
@@ -109,7 +109,7 @@
         color: white;
         width: 100%;
         margin: 0 0 10px 0;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     }
 
     .all-votes-wrapper {
@@ -122,18 +122,24 @@
 
     .vote-wrapper {
         width: 100%;
+        height: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         box-sizing: border-box;
-        padding: 10px 15px;
+        padding: 10px;
         margin: 7px 0;
         border-radius: 10px;
         background-color: white;
         color: $aut-grad-secondary;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         font-weight: bold;
-        font-size: larger;
+        font-size: 16px;
+    }
+
+    .vote-wrapper img {
+        height: 30px;
+        width: 30px;
     }
 
     .question-wrapper, .select-wrapper {
@@ -152,7 +158,7 @@
     .human {
         justify-self: flex-end;
         padding: 5px;
-        margin-right: 3px;
+        margin-right: 5px;
         border-radius: 5px;
         cursor: pointer;
     }
@@ -173,7 +179,7 @@
         font-size: x-large;
         cursor: pointer;
         margin: 17px 0;
-        box-shadow: 10px 10px 5px $aut-grad-shadow;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         position: -webkit-sticky;
         position: sticky;
         bottom: 20px;
