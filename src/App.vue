@@ -36,12 +36,13 @@
     }
 
     #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
+        /*font-family: Avenir, Helvetica, Arial, sans-serif;*/
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
         margin-top: 60px;
+        font-family: Sahel, serif;
     }
 
     .dotted-background {
@@ -53,5 +54,14 @@
         $dot-space: 35px;
         background-image: radial-gradient($dot-color $dot-size, $dot-bg-color $dot-size);
         background-size: $dot-space $dot-space;
+    }
+
+    @font-face {
+        font-family: Sahel;
+        src: url('https://cdn.rawgit.com/rastikerdar/sahel-font/9891b5c0/dist/Sahel-Black.eot');
+        src: url('https://cdn.rawgit.com/rastikerdar/sahel-font/9891b5c0/dist/Sahel-Black.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.rawgit.com/rastikerdar/sahel-font/9891b5c0/dist/Sahel-Black.woff') format('woff'),
+        url('https://cdn.rawgit.com/rastikerdar/sahel-font/9891b5c0/dist/Sahel-Black.ttf') format('truetype');
+        font-weight: 900;
     }
 </style>
