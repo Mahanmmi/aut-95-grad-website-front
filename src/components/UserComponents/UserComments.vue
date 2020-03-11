@@ -9,11 +9,14 @@
                     </i>
                 </div>
                 <div class="text-cards">
-                    <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                    <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                        چاپگرها و
                         متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-                        کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                        کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی
+                        نامفهوم
                         از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                        سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                        سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای
                         کاربردی می باشد</p>
                 </div>
             </div>
@@ -205,11 +208,14 @@
                             </div>
                             <div class="button-wrapper">
                                 <button id="submit">ثبت نظر</button>
-
-                                <div class="upload-btn-wrapper">
-                                    <button class="btn">انتخاب عکس</button>
-                                    <input type="file" @change="onFileSelected"/>
+                                <div class="file-select">
+                                    <p>{{selectedFile}}</p>
+                                    <div class="upload-btn-wrapper">
+                                        <button class="btn">انتخاب عکس</button>
+                                        <input type="file" @change="onFileSelected"/>
+                                    </div>
                                 </div>
+
                             </div>
 
                         </div>
@@ -226,88 +232,91 @@
 </template>
 
 <script>
-  export default {
-    name: "UserComments",
-    data() {
-      return {
-        comments: [
-          // sample
-          {
-            name: "منم منم مادرتون",
-            title: "متن زیبا",
-            text: "متن متن متن متن کوتاه",
-            date: "۱۳۹۸/۱۲/۱۲",
-            textPicUrl: "",
-            profilePicUrl: "../../assets/testpic.svg"
-          }, {
-            name: "منم منم مادرتون",
-            title: "متن زیبا",
-            text: "ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از\n" +
-              "                                        طراحان گرافیک\n" +
-              "                                        است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و\n" +
-              "                                        برای شرایط\n" +
-              "                                        فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می\n" +
-              "                                        باشد.لورم\n" +
-              "                                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان\n" +
-              "                                        گرافیک است.\n" +
-              "                                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای\n" +
-              "                                        شرایط فعلی\n" +
-              "                                        تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می\n" +
-              "                                        باشد",
-            date: "۱۳۹۸/۱۲/۱۲",
-            textPicUrl: "../../assets/realMadrid.svg",
-            profilePicUrl: "../../assets/testpic.svg"
-          }
-        ],
-        newComment: {
-          title: "",
-          text: "",
-          picture: null
+    export default {
+        name: "UserComments",
+        data() {
+            return {
+                comments: [
+                    // sample
+                    {
+                        name: "منم منم مادرتون",
+                        title: "متن زیبا",
+                        text: "متن متن متن متن کوتاه",
+                        date: "۱۳۹۸/۱۲/۱۲",
+                        textPicUrl: "",
+                        profilePicUrl: "../../assets/testpic.svg"
+                    }, {
+                        name: "منم منم مادرتون",
+                        title: "متن زیبا",
+                        text: "ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از\n" +
+                            "                                        طراحان گرافیک\n" +
+                            "                                        است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و\n" +
+                            "                                        برای شرایط\n" +
+                            "                                        فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می\n" +
+                            "                                        باشد.لورم\n" +
+                            "                                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان\n" +
+                            "                                        گرافیک است.\n" +
+                            "                                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای\n" +
+                            "                                        شرایط فعلی\n" +
+                            "                                        تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می\n" +
+                            "                                        باشد",
+                        date: "۱۳۹۸/۱۲/۱۲",
+                        textPicUrl: "../../assets/realMadrid.svg",
+                        profilePicUrl: "../../assets/testpic.svg"
+                    }
+                ],
+                newComment: {
+                    title: "",
+                    text: "",
+                    picture: null
+                },
+                windowWidth: '',
+                selectedFile: ''
+            }
         },
-        windowWidth: ''
-      }
-    },
-    methods: {
-      onFileSelected(event) {
-        console.log(event);
-        this.newComment.picture = event.target.files[0];
-      },
-      handleResize() {
-        this.windowWidth = window.innerWidth;
-      }
+        methods: {
+            onFileSelected(event) {
+                console.log(event);
+                this.newComment.picture = event.target.files[0];
+                this.selectedFile=event.target.files[0].name;
+            },
+            handleResize() {
+                this.windowWidth = window.innerWidth;
+            },
 
-    },
-    computed: {
-      verifiedUser: function () {
-        return true;
-        //write something here that can verify if the logged in user is the
-        //owner of the page
-      },
+        },
+        computed: {
+            verifiedUser: function () {
+                return true;
+                //write something here that can verify if the logged in user is the
+                //owner of the page
+            },
 
-    },
-    mounted() {
-      // window.onresize = () => {
-      //     this.windowWidth = window.innerWidth
-      // }
-    },
-    created() {
-      window.addEventListener('resize', this.handleResize);
-      this.handleResize();
-    },
-    destroyed() {
-      window.removeEventListener('resize', this.handleResize);
-    },
+        },
+        mounted() {
+            // window.onresize = () => {
+            //     this.windowWidth = window.innerWidth
+            // }
+        },
+        created() {
+            window.addEventListener('resize', this.handleResize);
+            this.handleResize();
+        },
+        destroyed() {
+            window.removeEventListener('resize', this.handleResize);
+        },
 
 
-  }
+    }
 </script>
 
 <style lang="scss" scoped>
     @import "public/colors";
 
-    .parent{
+    .parent {
         margin-top: 10px;
     }
+
     .content-wrapper {
         justify-content: center;
         margin: 3vw 0px 100px 0px;
@@ -330,7 +339,7 @@
     }
 
     .head {
-        margin: 0  30px 30px 30px;
+        margin: 0 30px 30px 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
         box-shadow: 0px 8px 8px $aut-grad-shadow;
@@ -544,8 +553,13 @@
     .details p {
         margin-top: 0px;
     }
-    .left-new-comment{
+
+    .left-new-comment {
         margin-bottom: 20px;
+    }
+    .file-select{
+        display: flex;
+        flex-direction: column-reverse;
     }
 
 
