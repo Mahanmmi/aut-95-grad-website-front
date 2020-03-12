@@ -561,6 +561,9 @@
         display: flex;
         flex-direction: column-reverse;
     }
+    .file-select p{
+        color: $aut-grad-secondary-dark;
+    }
 
 
     @media only screen and (max-width: 770px) {
