@@ -64,4 +64,8 @@
         url('https://cdn.rawgit.com/rastikerdar/sahel-font/9891b5c0/dist/Sahel-Black.ttf') format('truetype');
         font-weight: 900;
     }
+
+    button{
+        font-family: Sahel, serif;
+    }
 </style>
