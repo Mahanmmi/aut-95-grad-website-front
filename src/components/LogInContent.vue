@@ -58,11 +58,13 @@
         margin: 20px 10px 10px 10px;
     }
     button{
-        margin: 10px 30px 10px 30px;
+        margin: 10px 30px 5px 30px;
         padding: 15px;
         border-radius: 7px;
         font-size: 25px;
         font-weight: bold;
+
+
     }
     #Amirkabiri{
         background-color: $aut-grad-secondary;
