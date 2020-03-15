@@ -10,4 +10,13 @@ const apolloClient = new ApolloClient({
 
 export const apolloProvider = new VueApollo({
   defaultClient: apolloClient,
+  errorHandler (error) {
+    Vue.notify({
+      title: "خطا در ارتباط",
+      text: "خطایی هنگام ارتباط با سرور رخ داد. لطفا اتصال اینترنت خود را بررسی کنید",
+      type: "error"
+    });
+    console.log('Global error handler');
+    console.error(error.message);
+  }
 });
