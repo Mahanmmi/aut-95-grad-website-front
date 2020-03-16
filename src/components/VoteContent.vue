@@ -196,6 +196,12 @@
 
         .vote-wrapper {
             font-size: medium;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .select-wrapper {
+            align-self: flex-end;
         }
     }
 </style>

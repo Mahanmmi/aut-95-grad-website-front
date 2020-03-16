@@ -59,7 +59,7 @@
 </template>
 
 <script>
-  import VueTextFit from "@/components/UserComponents/VueTextFit";
+  import VueTextFit from "@/components/VueTextFit";
 
   export default {
     name: "UserProfileHolder",

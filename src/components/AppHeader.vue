@@ -24,27 +24,49 @@
                     class="main-link link"
                     exact-active-class="link-active"
                 >
-                    صفحه اول
+                    <vue-text-fit
+                        :max="1"
+                        @click="mobileMainMenu = false"
+                        style="white-space: nowrap"
+                    >
+                        صفحه اول
+                    </vue-text-fit>
                 </router-link>
                 <router-link
                     to="/graduates"
                     class="main-link link"
                     exact-active-class="link-active"
                 >
-                    فارغ‌التحصیلان
+                    <vue-text-fit
+                        :max="1"
+                        @click="mobileMainMenu = false"
+                    >
+                        فارغ‌التحصیلان
+                    </vue-text-fit>
                 </router-link>
                 <router-link
                     to="/voting"
                     class="main-link link"
                     exact-active-class="link-active"
+                    @click="mobileMainMenu = false"
                 >
-                    رای‌گیری‌ها
+                    <vue-text-fit
+                        :max="1"
+                        @click="mobileMainMenu = false"
+                    >
+                        رای‌گیری‌ها
+                    </vue-text-fit>
                 </router-link>
             </div>
         </nav>
-        <div v-if="!isFullBlue" class="logo-container">
+        <router-link
+            tag="div"
+            v-if="!isFullBlue"
+            class="logo-container"
+            to="/"
+        >
             <img alt="logo" style="height: 100%" src="../assets/logo.svg">
-        </div>
+        </router-link>
         <nav class="user-menu-wrapper">
             <div
                 class="user-logo"
@@ -58,10 +80,10 @@
                 class="user-menu"
                 :class="{'user-menu-active': userMenu}"
             >
-                <div class="user-link">
+                <div class="user-link" @click="userMenu = false">
                     پروفایل من
                 </div>
-                <div class="user-link">
+                <div class="user-link" @click="userMenu = false">
                     خروج
                 </div>
             </div>
@@ -70,8 +92,11 @@
 </template>
 
 <script>
+  import VueTextFit from "@/components/VueTextFit";
+
   export default {
     name: "AppHeader",
+    components: {VueTextFit},
     data() {
       return {
         mobileMainMenu: false,
@@ -128,12 +153,18 @@
     }
 
     .link, .user-link {
+        align-items: center;
         text-decoration: none;
         color: $aut-grad-secondary;
         padding: 10px 15px;
         margin: 0 5px;
         border-radius: 10px;
         cursor: pointer;
+    }
+
+    .main-link {
+        display: flex;
+        align-items: center;
     }
 
     .user-link {
@@ -146,6 +177,7 @@
 
     .logo-container {
         height: 70px;
+        cursor: pointer;
     }
 
     .user-menu-wrapper {
