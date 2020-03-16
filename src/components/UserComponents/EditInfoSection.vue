@@ -98,7 +98,7 @@
                                     v-model="this.unImportantData.telegram"
                                     placeholder=" "
                             />
-                            <label for="firstName">تلگرام</label>
+                            <label for="telegram">تلگرام</label>
                         </div>
                         <div class="single-field">
                             <input
@@ -107,7 +107,7 @@
                                     v-model="this.unImportantData.tweeter"
                                     placeholder=" "
                             />
-                            <label for="lastName" >توییتر</label>
+                            <label for="tweeter" >توییتر</label>
                         </div>
                     </div>
                     <div class="left">
@@ -118,7 +118,7 @@
                                     v-model="this.unImportantData.instagram"
                                     placeholder=" "
                             />
-                            <label for="userName">اینستاگرام</label>
+                            <label for="instagram">اینستاگرام</label>
                         </div>
                         <div class="single-field">
                             <input

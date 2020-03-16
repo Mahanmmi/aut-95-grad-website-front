@@ -9,7 +9,7 @@
                     </i>
                 </div>
                 <div class="text-cards">
-                    <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                    <textarea name="text" id="my-text" cols="" rows="10">
                         چاپگرها و
                         متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
                         کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی
@@ -17,7 +17,8 @@
                         از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
                         سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
                         ابزارهای
-                        کاربردی می باشد</p>
+                        کاربردی می باشد
+                    </textarea>
                 </div>
             </div>
             <div class="your-word">
@@ -177,53 +178,52 @@
                 </div>
 
 
-            </div>
-            <div class="comments-wrapper">
-                <div class="each-comment-wrapper">
-                    <div class="right">
-                        <div class="profile-pic-wrapper">
-                            <img class="profile-pic" src="../../assets/testpic.svg" alt="عکس">
-                        </div>
-                    </div>
-                    <div class="left left-new-comment">
-                        <div class="comment-cards left-new-comment">
-                            <div class="comment-title">
-                                <input
-                                        type="text"
-                                        v-model="this.newComment.title"
-                                        placeholder="عنوان نظر..."
-                                />
+                <div class="comments-wrapper">
+                    <div class="each-comment-wrapper">
+                        <div class="right">
+                            <div class="profile-pic-wrapper">
+                                <img class="profile-pic" src="../../assets/testpic.svg" alt="عکس">
                             </div>
-                            <div class="horizontal-line"></div>
-                            <div class="comment">
-                                <div>
+                        </div>
+                        <div class="left left-new-comment">
+                            <div class="comment-cards left-new-comment">
+                                <div class="comment-title">
                                     <input
                                             type="text"
-                                            v-model="this.newComment.text"
-                                            placeholder="تو هم نظر بده..."
+                                            v-model="this.newComment.title"
+                                            placeholder="عنوان نظر..."
                                     />
                                 </div>
+                                <div class="horizontal-line"></div>
+                                <div class="comment">
+                                    <div>
+                                        <input
+                                                type="text"
+                                                v-model="this.newComment.text"
+                                                placeholder="تو هم نظر بده..."
+                                        />
+                                    </div>
 
-                            </div>
-
-                        </div>
-                        <div class="button-wrapper">
-                            <button id="submit">ثبت نظر</button>
-                            <div class="file-select">
-                                <p>{{selectedFile}}</p>
-                                <div class="upload-btn-wrapper">
-                                    <button class="btn">
-                                        <p style="font-weight: normal">انتخاب عکس</p>
-                                        <img data-v-804fc128="" alt="image logo" src="/img/image-logo.b9c0a20c.svg">
-                                    </button>
-                                    <input type="file" @change="onFileSelected"/>
                                 </div>
+
+                            </div>
+                            <div class="button-wrapper">
+                                <button id="submit">ثبت نظر</button>
+                                <div class="file-select">
+                                    <p>{{selectedFile}}</p>
+                                    <div class="upload-btn-wrapper">
+                                        <button class="btn">انتخاب عکس</button>
+                                        <input type="file" @change="onFileSelected"/>
+                                    </div>
+                                </div>
+
                             </div>
 
                         </div>
-
                     </div>
                 </div>
+
+
             </div>
 
         </div>
@@ -279,7 +279,7 @@
             onFileSelected(event) {
                 console.log(event);
                 this.newComment.picture = event.target.files[0];
-                this.selectedFile = event.target.files[0].name;
+                this.selectedFile=event.target.files[0].name;
             },
             handleResize() {
                 this.windowWidth = window.innerWidth;
@@ -315,7 +315,7 @@
     @import "public/colors";
 
     .parent {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .content-wrapper {
@@ -334,22 +334,20 @@
         background-color: white;
         margin: 0 30px 30px 30px;
         border-radius: 10px;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 8px 8px $aut-grad-shadow;
         padding: 20px;
         text-align: right;
     }
 
     .head {
-        margin: 0 30px 18px 30px;
+        margin: 0 30px 30px 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 8px 8px $aut-grad-shadow;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 10px;
-        height: 25px;
-        align-items: center;
+        padding: 20px;
     }
 
     .title {
@@ -395,9 +393,8 @@
         border: 2px solid $aut-grad-secondary;
         overflow: hidden;
         z-index: 2;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-        position: sticky;
-        top: 100px;
+        box-shadow: 0px 8px 8px $aut-grad-shadow;
+
     }
 
     .profile-pic {
@@ -412,15 +409,15 @@
     .comment-cards {
         background-color: white;
         border-radius: 10px;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 8px 8px $aut-grad-shadow;
         padding: 20px;
         text-align: right;
-        /*margin-right: 10px;*/
+        margin-right: 10px;
 
     }
 
     .comment-cards:hover {
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+        box-shadow: 5px 15px 13px $aut-grad-shadow;
     }
 
     .comment-title {
@@ -483,16 +480,16 @@
     .button-wrapper {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         justify-self: left;
         margin: 0px 0 30px 0;
     }
 
     #submit {
-        /*padding: 15px;*/
+        padding: 15px;
         border-radius: 7px;
-        font-size: 1.1em;
+        font-size: 25px;
         font-weight: bold;
         width: 200px;
         background-color: $aut-grad-secondary;
@@ -502,7 +499,7 @@
 
     #submit:hover {
         background-color: $aut-grad-secondary-dark;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3px 5px $aut-grad-shadow;
     }
 
     .upload-btn-wrapper {
@@ -515,24 +512,22 @@
         border: 3px solid $aut-grad-secondary;
         color: $aut-grad-secondary;
         background-color: white;
-        /*padding: 8px 20px;*/
+        padding: 8px 20px;
         border-radius: 8px;
-        font-size: 1em;
-        /*font-weight: bold;*/
-        align-items: center;
-        justify-content: space-evenly;
-        display: flex;
-        width: 150px;
-        height: 40px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #my-text{
+        border: none;
+        font-family: Sahel;
+        width: 100%;
+        column-count: auto;
+
     }
 
     button:hover {
         cursor: pointer;
-    }
-
-    button {
-        height: 50px;
-        align-items: center;
     }
 
     .upload-btn-wrapper input:hover {
@@ -571,13 +566,11 @@
     .left-new-comment {
         margin-bottom: 20px;
     }
-
-    .file-select {
+    .file-select{
         display: flex;
         flex-direction: column-reverse;
     }
-
-    .file-select p {
+    .file-select p{
         color: $aut-grad-secondary-dark;
     }
 
@@ -588,16 +581,13 @@
             margin: 0;
         }
         .head {
-            margin: 0;
-            position: sticky;
-            top: 100px;
-            z-index: 3;
+            margin: 0px 0 20px 0;
         }
         .text-cards {
-            margin: 20px 0;
+            margin: 0px 0 20px 0;
         }
         .comments-wrapper {
-            margin: 0;
+            margin: 0px 0 20px 0;
         }
         .details {
             display: flex;
@@ -606,7 +596,6 @@
         }
         .each-comment-wrapper {
             flex-direction: column;
-            margin: 20px 0 0;
         }
         .left {
             width: 100%;
@@ -633,12 +622,8 @@
         }
 
         .picture-wrapper {
-            margin: 0;
+            margin: 0px 0 10px 0;
             width: 100%;
-        }
-
-        .comment-cards {
-            margin: 0;
         }
 
         .comment-pic {
@@ -646,19 +631,7 @@
         }
 
         .verify-comment {
-            margin-top: 0;
-        }
-
-        .button-wrapper {
-            margin-top: 20px;
-        }
-
-        .btn {
-            width: 50px;
-        }
-
-        .btn p {
-            display: none;
+            margin-top: 0px;
         }
 
     }
