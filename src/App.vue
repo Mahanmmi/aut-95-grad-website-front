@@ -2,6 +2,7 @@
     <div id="app">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
+        <notifications position="top center" classes="vue-notification-custom"/>
         <app-header :is-full-blue="isFullBlue"/>
         <router-view :class="{'dotted-background': !isFullBlue}"/>
         <app-footer :is-full-blue="isFullBlue"/>
@@ -65,7 +66,35 @@
         font-weight: 900;
     }
 
-    button{
+    .vue-notification-custom {
+        padding: 10px;
+        margin: 0 5px 5px;
+
+        direction: rtl;
+        text-align: right;
+        font-size: 12px;
+
+        color: #ffffff;
+        background: #44A4FC;
+        border-right: 5px solid #187FE7;
+
+        &.warn {
+            background: #ffb648;
+            border-right-color: #f48a06;
+        }
+
+        &.error {
+            background: #E54D42;
+            border-right-color: #B82E24;
+        }
+
+        &.success {
+            background: #68CD86;
+            border-right-color: #42A85F;
+        }
+    }
+
+    button {
         font-family: Sahel, serif;
     }
 </style>

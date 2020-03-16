@@ -1,0 +1,74 @@
+type Answer {
+  text: String!
+  question: Question!
+}
+
+type AutUser {
+  firstName: String!
+  lastName: String!
+  profilePicture: Image!
+  studentNumber: String!
+  birthday: DateTime
+  birthPlace: String
+  phone: String
+  bio: String
+  quote: String
+  GithubURL: String
+  InstagramURL: String
+  LinkedInURL: String
+  TwitterURL: String
+  autMail: String!
+  isGraduating: Boolean!
+  isAdmin: Boolean!
+  answersGiven: [Answer!]!
+}
+
+type Comment {
+  _id: ID!
+  text: String!
+  sender: User!
+  receiver: User!
+  images: [Image!]!
+}
+
+"""
+The javascript `Date` as string. Type represents date and time as the ISO Date string.
+"""
+scalar DateTime
+
+type Image {
+  path: String!
+  alternateText: String
+  hasThumbnail: Boolean
+}
+
+type Mutation {
+  addImage(hasThumbnail: Boolean, alternateText: String, path: String!): Image!
+  addCommentForUser(picturePaths: [String!]!, senderNumber: String!, receiverNumber: String!, text: String!): Comment!
+  deleteCommentForUser(id: ID!): Comment!
+  AutLogin(code: String!): AutUser!
+  giveAnswer(answer: String!, question: String!, studentNumber: String!): Answer!
+}
+
+type Query {
+  allImages: [Image!]!
+  getCommentsForUser(studentNumber: String!): [Comment!]!
+  getAllGraduating: AutUser!
+  getSingleUser(studentNumber: String!): AutUser!
+  allAnswersToQuestions(user: String!): QuestionAnswer!
+}
+
+type Question {
+  phrase: String!
+}
+
+type QuestionAnswer {
+  question: String!
+  answer: String!
+}
+
+type User {
+  firstName: String!
+  lastName: String!
+  profilePicture: Image!
+}
