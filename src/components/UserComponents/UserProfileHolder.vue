@@ -218,7 +218,8 @@
     .profile-wrapper {
         display: flex;
         flex-direction: column;
-        width: 17%;
+        width: 20%;
+        margin-right: 30px;
     }
 
     .profile {
@@ -336,11 +337,11 @@
         border-radius: 10px;
         border: none;
         width: 80%;
-        padding: 10px;
+        /*padding: 10px;*/
         text-align: center;
         background-color: $aut-grad-secondary;
         font-weight: bold;
-        font-size: x-large;
+        font-size: 1.1em;
         cursor: pointer;
         margin: 7px 0;
     }
@@ -375,11 +376,11 @@
         border-radius: 10px;
         border: 5px solid $aut-grad-secondary;
         width: 80%;
-        padding: 5px;
+        /*padding: 5px;*/
         text-align: center;
         background-color: white;
         font-weight: bold;
-        font-size: x-large;
+        font-size: 1.1em;
         cursor: pointer;
         margin: 7px 0;
     }
@@ -419,9 +420,15 @@
         word-wrap: break-spaces;
     }
 
+    button {
+        height: 50px;
+        align-items: center;
+    }
+
     @media only screen and (max-width: 768px) {
         .profile-wrapper {
             width: 80%;
+            margin-right: 0;
         }
 
         .profile-pic-wrapper {

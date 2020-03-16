@@ -171,7 +171,7 @@
         margin-top: 3vw;
     }
     .parent{
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     .fields-wrapper-top {
@@ -186,14 +186,16 @@
     }
 
     .head {
-        margin: 0 30px 30px 30px;
+        margin: 0 30px 18px 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
         box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 20px;
+        padding: 10px;
+        height: 25px;
+        align-items: center;
     }
 
     .title {
