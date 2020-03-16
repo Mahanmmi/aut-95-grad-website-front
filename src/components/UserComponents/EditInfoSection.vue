@@ -13,6 +13,7 @@
                         <div class="right">
                             <div class="single-field">
                                 <input
+                                        class="animation"
                                         id="firstName"
                                         type="text"
                                         v-model="this.importantData.firstName"
@@ -22,6 +23,7 @@
                             </div>
                             <div class="single-field">
                                 <input
+                                        class="animation"
                                         id="lastName"
                                         type="text"
                                         v-model="this.importantData.lastName"
@@ -31,6 +33,7 @@
                             </div>
                             <div class="single-field">
                                 <input
+                                        class="animation"
                                         id="email"
                                         type="text"
                                         v-model="this.importantData.email"
@@ -42,6 +45,7 @@
                         <div class="left">
                             <div class="single-field">
                                 <input
+                                        class="animation"
                                         id="userName"
                                         type="text"
                                         v-model="this.importantData.username"
@@ -51,6 +55,7 @@
                             </div>
                             <div class="single-field">
                                 <input
+                                        class="animation"
                                         id="birthDate"
                                         type="text"
                                         v-model="this.importantData.birthDate"
@@ -60,6 +65,7 @@
                             </div>
                             <div class="single-field">
                                 <input
+                                        class="animation"
                                         id="gender"
                                         type="text"
                                         v-model="this.importantData.gender"
@@ -71,9 +77,12 @@
                     </div>
                     <div class="bottom">
                         <div class="single-field">
-                            <input
+                            <textarea
+                                    class="my-text-area animation"
+                                    name=""
                                     id="about"
-                                    type="text"
+                                    cols=" "
+                                    rows="3"
                                     v-model="this.importantData.about"
                                     placeholder=" "
                             />
@@ -93,6 +102,7 @@
                     <div class="right">
                         <div class="single-field">
                             <input
+                                    class="animation"
                                     id="telegram"
                                     type="text"
                                     v-model="this.unImportantData.telegram"
@@ -102,6 +112,7 @@
                         </div>
                         <div class="single-field">
                             <input
+                                    class="animation"
                                     id="tweeter"
                                     type="text"
                                     v-model="this.unImportantData.tweeter"
@@ -113,6 +124,7 @@
                     <div class="left">
                         <div class="single-field">
                             <input
+                                    class="animation"
                                     id="instagram"
                                     type="text"
                                     v-model="this.unImportantData.instagram"
@@ -122,6 +134,7 @@
                         </div>
                         <div class="single-field">
                             <input
+                                    class="animation"
                                     id="gitHub"
                                     type="text"
                                     v-model="this.unImportantData.gitHub"
@@ -229,7 +242,7 @@
         margin-left: 60px;
     }
 
-    input {
+    .animation {
         width: 100%;
         border: 0;
         outline: 0;
@@ -244,13 +257,13 @@
 
     }
 
-    label, input {
+    label, .animation {
         transition: all 0.2s;
         touch-action: manipulation;
     }
 
 
-    input:focus {
+    .animation:focus {
         outline: 0;
         border-bottom: 1px solid #666;
     }
@@ -264,7 +277,7 @@
         position: relative;
         right: 50px;
         min-width: 80px;
-        top: -20px;
+        top: -25px;
     }
 
     #label-firstName{
@@ -280,7 +293,7 @@
     * Also make sure the label is only on one row, at max 2/3rds of the
     * field—to make sure it scales properly and doesn't wrap.
     */
-    input:placeholder-shown + label {
+    .animation:placeholder-shown + label {
         cursor: text;
         max-width: 66.66%;
         white-space: nowrap;
@@ -302,7 +315,7 @@
     /**
     * Show the placeholder when the input is focused.
     */
-    input:focus::-webkit-input-placeholder {
+    .animation:focus::-webkit-input-placeholder {
         opacity: 1;
     }
 
@@ -311,8 +324,8 @@
     * Also, do this when the placeholder is _not_ shown, i.e. when
     * there's something in the input at all.
     */
-    input:not(:placeholder-shown) + label,
-    input:focus + label {
+    .animation:not(:placeholder-shown) + label,
+    .animation:focus + label {
         transform: translate(0, 0) scale(1);
         cursor: pointer;
     }
@@ -337,7 +350,7 @@
 
 
 
-    @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: 1200px) {
 
         .top{
             flex-direction: column;
