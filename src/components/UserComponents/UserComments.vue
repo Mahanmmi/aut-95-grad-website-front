@@ -9,7 +9,7 @@
                     </i>
                 </div>
                 <div class="text-cards">
-                    <textarea name="text" class="my-text-area" cols="" rows="10">
+                    <textarea name="text" class="my-text-area" cols="" rows="5">
                         چاپگرها و
                         متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
                         کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی
