@@ -2,78 +2,22 @@
     <div class="wrapper">
         <div class="graduates-wrapper">
             <div class="graduates-desc">
-                <p>دنبال کی میگردی؟</p>
+                <input
+                    class="graduate-search"
+                    placeholder="دنبال کی میگردی؟"
+                >
             </div>
-            <div class="graduate-container">
+            <div v-for="i in 10" :key="i" class="graduate-container">
                 <div class="graduate-image">
                     <img alt="grad photo" src="../assets/testpic.svg">
                 </div>
                 <div class="graduate-name">
-                    اسم یارو خیلی خوبه و طولانی و لعنتی
-                </div>
-            </div>
-            <div class="graduate-container">
-                <div class="graduate-image">
-                    <img alt="grad photo" src="../assets/testpic.svg">
-                </div>
-                <div class="graduate-name">
-                    اسم یارو خیلی خوبه و طولانی و لعنتی
-                </div>
-            </div>
-            <div class="graduate-container">
-                <div class="graduate-image">
-                    <img alt="grad photo" src="../assets/testpic.svg">
-                </div>
-                <div class="graduate-name">
-                    اسم یارو خیلی خوبه و طولانی و لعنتی
-                </div>
-            </div>
-            <div class="graduate-container">
-                <div class="graduate-image">
-                    <img alt="grad photo" src="../assets/testpic.svg">
-                </div>
-                <div class="graduate-name">
-                    اسم یارو خیلی خوبه و طولانی و لعنتی
-                </div>
-            </div>
-            <div class="graduate-container">
-                <div class="graduate-image">
-                    <img alt="grad photo" src="../assets/testpic.svg">
-                </div>
-                <div class="graduate-name">
-                    اسم یارو خیلی خوبه و طولانی و لعنتی
-                </div>
-            </div>
-            <div class="graduate-container">
-                <div class="graduate-image">
-                    <img alt="grad photo" src="../assets/testpic.svg">
-                </div>
-                <div class="graduate-name">
-                    اسم یارو خیلی خوبه و طولانی و لعنتی
-                </div>
-            </div>
-            <div class="graduate-container">
-                <div class="graduate-image">
-                    <img alt="grad photo" src="../assets/testpic.svg">
-                </div>
-                <div class="graduate-name">
-                    اسم یارو خیلی خوبه و طولانی و لعنتی
-                </div>
-            </div>
-            <div class="graduate-container">
-                <div class="graduate-image">
-                    <img alt="grad photo" src="../assets/testpic.svg">
-                </div>
-                <div class="graduate-name">
-                    اسم یارو خیلی خوبه و طولانی و لعنتی
-                </div>
-            </div>
-            <div class="graduate-container">
-                <div class="graduate-image">
-                    <img alt="grad photo" src="../assets/testpic.svg">
-                </div>
-                <div class="graduate-name">
-                    اسم یارو خیلی خوبه و طولانی و لعنتی
+                    <vue-text-fit
+                        :max="1"
+                        :target-line-count="2"
+                    >
+                        اسم یارو خیلی خوبه و طولانی و لعنتی
+                    </vue-text-fit>
                 </div>
             </div>
         </div>
@@ -81,8 +25,11 @@
 </template>
 
 <script>
+  import VueTextFit from "@/components/VueTextFit";
+
   export default {
-    name: "GraduatesContent"
+    name: "GraduatesContent",
+    components: {VueTextFit}
   }
 </script>
 
@@ -122,6 +69,12 @@
         box-sizing: border-box;
     }
 
+    .graduate-search {
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+
     .graduate-container {
         width: 160px;
         margin: 20px 5px 0 5px;
@@ -133,11 +86,16 @@
         display: flex;
         justify-content: center;
         min-height: 100px;
-        width: 160px;
+        margin: 0;
+        width: 100%;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
         background-color: $aut-grad-primary;
         color: white;
+
+        img {
+            width: 100%;
+        }
     }
 
     .graduate-name {
@@ -145,13 +103,19 @@
         justify-content: center;
         align-items: center;
         padding: 5px;
-        width: 160px;
-        height: 50px;
+        width: 100%;
+        min-height: 50px;
         box-sizing: border-box;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
         background-color: $aut-grad-secondary;
         color: white;
         font-weight: bold;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .graduate-container {
+            width: 80px;
+        }
     }
 </style>

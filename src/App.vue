@@ -1,7 +1,6 @@
 <template>
     <div id="app">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-              rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <notifications position="top center" classes="vue-notification-custom"/>
         <app-header :is-full-blue="isFullBlue"/>
         <router-view :class="{'dotted-background': !isFullBlue}"/>
