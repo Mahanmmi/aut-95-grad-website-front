@@ -9,7 +9,7 @@
                     </i>
                 </div>
                 <div class="text-cards">
-                    <textarea name="text" id="my-text" cols="" rows="10">
+                    <textarea name="text" class="my-text-area" cols="" rows="10">
                         چاپگرها و
                         متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
                         کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی
@@ -195,14 +195,18 @@
                                     />
                                 </div>
                                 <div class="horizontal-line"></div>
-                                <div class="comment">
-                                    <div>
-                                        <input
-                                                type="text"
+                                <div>
+                                        <textarea
+                                                class="my-text-area"
+                                                name=""
+                                                id=""
+                                                cols="30"
+                                                rows="10"
                                                 v-model="this.newComment.text"
-                                                placeholder="تو هم نظر بده..."
-                                        />
-                                    </div>
+                                                placeholder="تو هم نظر بده...">
+
+                                        </textarea>
+
 
                                 </div>
 
@@ -279,7 +283,7 @@
             onFileSelected(event) {
                 console.log(event);
                 this.newComment.picture = event.target.files[0];
-                this.selectedFile=event.target.files[0].name;
+                this.selectedFile = event.target.files[0].name;
             },
             handleResize() {
                 this.windowWidth = window.innerWidth;
@@ -518,10 +522,12 @@
         font-weight: bold;
     }
 
-    #my-text{
+    .my-text-area {
         border: none;
         font-family: Sahel;
         width: 100%;
+        height: 100%;
+        box-sizing: border-box;
         column-count: auto;
 
     }
@@ -566,11 +572,13 @@
     .left-new-comment {
         margin-bottom: 20px;
     }
-    .file-select{
+
+    .file-select {
         display: flex;
         flex-direction: column-reverse;
     }
-    .file-select p{
+
+    .file-select p {
         color: $aut-grad-secondary-dark;
     }
 
