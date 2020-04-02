@@ -500,7 +500,7 @@
         width: 200px;
         background-color: $aut-grad-secondary;
         color: white;
-        border: 2px solid $aut-grad-secondary;
+        border: none;
     }
 
     #submit:hover {

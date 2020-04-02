@@ -57,13 +57,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        min-height: 30px;
         border-radius: 10px;
         margin: 0;
         border: 2px solid $aut-grad-secondary;
         background-color: white;
-        color: #c4c4c4;
-        font-size: x-large;
-        padding: 5px;
+        padding: 7px;
         width: 100%;
         box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         box-sizing: border-box;
@@ -78,6 +77,9 @@
     
     .graduate-search {
         width: 100%;
+        height: 100%;
+        color: #545454;
+        font-size: x-large;
         text-align: center;
         border: none;
     }
