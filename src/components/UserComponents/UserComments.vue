@@ -217,9 +217,13 @@
                                 <button id="submit">ثبت نظر</button>
                                 <div class="file-select">
                                     <p>{{selectedFile}}</p>
-                                    <div class="upload-btn-wrapper">
-                                        <button class="btn">انتخاب عکس</button>
-                                        <input type="file" @change="onFileSelected"/>
+                                    <div class="upload-btn-wrapper" v-bind:class="{ btnhover : isHover }">
+                                        <button class="btn" >انتخاب عکس</button>
+                                        <input type="file"
+                                               @change="onFileSelected"
+                                               @mouseover="isHover = true"
+                                               @mouseleave="isHover = false"
+                                        />
                                     </div>
                                 </div>
 
@@ -278,7 +282,8 @@
                     picture: null
                 },
                 windowWidth: '',
-                selectedFile: ''
+                selectedFile: '',
+                isHover: false
             }
         },
         methods: {
@@ -512,6 +517,7 @@
         position: relative;
         overflow: hidden;
         display: inline-block;
+        border-radius: 8px;
     }
 
     .btn {
@@ -522,6 +528,10 @@
         border-radius: 8px;
         font-size: 20px;
         font-weight: bold;
+
+    }
+    .btnhover{
+        box-shadow: 0px 3px 5px $aut-grad-shadow;
     }
 
     .my-text-area {
