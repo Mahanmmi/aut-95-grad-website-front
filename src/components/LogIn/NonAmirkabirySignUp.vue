@@ -2,11 +2,9 @@
     <div class="parent">
         <div class="content-wrapper">
             <div class="important-info">
-                <div class="head">
-                    <p class="title">اطلاعات ضروری</p>
-                    <i class="material-icons">
-                        keyboard_arrow_down
-                    </i>
+                <div>
+                    <h1 class="gold-text">اطلاعات ضروری</h1>
+                    <div class="horizontal-line"/>
                 </div>
                 <div class="fields-wrapper-top">
                     <div class="top">
@@ -129,7 +127,7 @@
     @import "../../../public/colors";
 
     .parent {
-        min-height: calc(100vh - 50px);
+        /*min-height: calc(100vh - 50px);*/
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -139,20 +137,32 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 50px;
-        margin: 0px 10vw 0px 10vw;
+        /*padding: 50px;*/
+        /*margin: 0px 10vw 0px 10vw;*/
+    }
+
+
+    .gold-text {
+        color: $aut-grad-secondary;
+    }
+
+    .horizontal-line {
+        height: 2px;
+        background-color: $aut-grad-secondary;
+        justify-self: stretch;
+        margin: 10px;
     }
 
 
     .fields-wrapper-top {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: flex-start;
         padding: 50px 0;
-        background-color: white;
-        margin: 0 30px 30px 30px;
-        border-radius: 10px;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        /*background-color: white;*/
+        /*margin: 0 30px 30px 30px;*/
+        /*border-radius: 10px;*/
+        /*box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);*/
     }
 
     .head {
@@ -183,21 +193,23 @@
     .top {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
+        width: 100%;
     }
 
     .left {
-        width: 40%;
+        width: 60%;
         margin-left: 60px;
     }
 
     .right {
-        width: 40%;
-        margin-right: 0;
+        width: 60%;
     }
 
     .bottom {
         margin-left: 60px;
+        align-self: center;
+        width: 90%;
     }
 
     .animation {
@@ -293,11 +305,11 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        margin: 0 0 40px 0;
+        margin: 0 0 50px 0;
     }
 
     .button-wrapper {
-        margin-top: 30px;
+        /*margin-top: 30px;*/
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -312,6 +324,7 @@
         font-size: 23px;
         font-weight: bold;
         width: 18vh;
+        min-width: 100px;
         margin: 0 5px 0 5px;
     }
 
@@ -348,6 +361,7 @@
         }
         .bottom {
             margin: 0;
+            align-self: flex-start;
             width: 90%;
         }
 

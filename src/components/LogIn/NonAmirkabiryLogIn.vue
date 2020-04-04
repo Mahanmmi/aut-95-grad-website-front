@@ -2,11 +2,9 @@
     <div class="parent">
         <div class="content-wrapper">
             <div class="important-info">
-                <div class="head">
-                    <p class="title">ورود</p>
-                    <i class="material-icons">
-                        keyboard_arrow_down
-                    </i>
+                <div>
+                    <h1 class="gold-text">ورود به سایت</h1>
+                    <div class="horizontal-line"></div>
                 </div>
                 <div class="fields-wrapper-top">
                     <div class="single-field">
@@ -82,8 +80,19 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 50px;
-        margin: 0px 25vw 0px 25vw;
+        /*padding: 50px;*/
+        /*margin: 0px 25vw 0px 25vw;*/
+    }
+
+    .gold-text {
+        color: $aut-grad-secondary;
+    }
+
+    .horizontal-line {
+        height: 2px;
+        background-color: $aut-grad-secondary;
+        justify-self: stretch;
+        margin: 10px;
     }
 
 
@@ -92,10 +101,10 @@
         flex-direction: column;
         justify-content: center;
         padding: 50px 0;
-        background-color: white;
-        margin: 0 30px 30px 30px;
-        border-radius: 10px;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        /*background-color: white;*/
+        margin: 0 30px;
+        /*border-radius: 10px;*/
+        /*box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);*/
     }
 
     .head {
@@ -235,6 +244,7 @@
         border-radius: 7px;
         font-size: 23px;
         font-weight: bold;
+        min-width: 100px;
         width: 18vh;
         margin: 0 5px 0 5px;
     }
