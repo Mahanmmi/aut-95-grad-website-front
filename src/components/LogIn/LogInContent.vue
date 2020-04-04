@@ -1,24 +1,21 @@
 <template>
     <div class="home-wrapper">
-        <div class="form-wrapper">
+        <div class="form-wrapper" v-if="enteringMode === ''">
             <div class="top">
                 <h1 class="gold-text">ورود به سایت</h1>
                 <div class="horizontal-line"></div>
             </div>
             <transition>
-                <div class="button-wrapper" v-if="!loginMode">
-                    <button class="Amirkabiri main-button">ورود امیرکبیری‌ها</button>
-                    <button class="not-Amirkabiri main-button" @click="loginMode = true">ورود غیرامیرکبیری‌ها</button>
+                <div class="button-wrapper" v-if="isAmirkabiry">
+                    <button class="top-button main-button">ورود امیرکبیری‌ها</button>
+                    <button class="bottom-button main-button" @click="isAmirkabiry = false">ورود غیرامیرکبیری‌ها
+                    </button>
                 </div>
                 <div class="button-wrapper" v-else>
 
-                    <router-link to="/signin/non-amirkabiry">
-                        <button class="Amirkabiri sub-button">ورود</button>
-                    </router-link>
-                    <router-link to="/signup/non-amirkabiry">
-                        <button class="not-Amirkabiri sub-button">ثبت‌نام</button>
-                    </router-link>
-                    <button class="refresh-page" @click="location.reload()">
+                    <button class="top-button sub-button" @click="enteringMode= 'signin'">ورود</button>
+                    <button class="bottom-button sub-button" @click="enteringMode= 'signup'">ثبت‌نام</button>
+                    <button class="refresh-page" @click="refreshPage()">
                     <span class="material-icons">undo
                         </span>
                         بازگشت
@@ -26,21 +23,36 @@
                 </div>
             </transition>
         </div>
+        <div class="content-wrapper" v-else-if="enteringMode === 'signin'">
+            <NonAmirkabiryLogIn></NonAmirkabiryLogIn>
+        </div>
+        <div class="content-wrapper" v-else-if="enteringMode === 'signup'">
+            <NonAmirkabirySignUp></NonAmirkabirySignUp>
+        </div>
     </div>
 </template>
 
 <script>
+    import NonAmirkabiryLogIn from "./NonAmirkabiryLogIn";
+    import NonAmirkabirySignUp from "./NonAmirkabirySignUp";
+
     export default {
         name: "LogInContent",
+        components: {NonAmirkabirySignUp, NonAmirkabiryLogIn},
         data() {
             return {
-                loginMode: false
+                isAmirkabiry: true,
+                enteringMode: ''
             }
         },
         created() {
 
         },
-        methods: {}
+        methods:{
+            refreshPage:function () {
+                window.location.reload()
+            }
+        }
     }
 </script>
 
@@ -95,24 +107,24 @@
         font-weight: bold;
     }
 
-    .Amirkabiri {
+    .top-button{
         background-color: $aut-grad-secondary;
         color: white;
         border: none;
         /*border: 2px solid $aut-grad-secondary;*/
     }
 
-    .Amirkabiri:hover {
+    .top-button:hover {
         background-color: $aut-grad-secondary-dark;
     }
 
-    .not-Amirkabiri {
+    .bottom-button {
         background-color: white;
         color: $aut-grad-secondary;
         border: 4px solid $aut-grad-secondary;
     }
 
-    .not-Amirkabiri:hover {
+    .bottom-button:hover {
         background-color: #eeeeee;
     }
 
@@ -125,22 +137,29 @@
     }
 
     .sub-button {
-        width: 70%;
-        margin: 0px 40px 20px 40px;
+        margin: 0px 40px 15px 40px;
         padding: 15px;
         border-radius: 7px;
         font-size: 25px;
         font-weight: bold;
     }
+    .sub-button.top-button{
+        margin-top: 60px;
+    }
+    .content-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     @media only screen and (max-width: 768px) {
-        .form-wrapper{
+        .form-wrapper {
             width: 80%;
             display: flex;
             justify-content: center;
             margin: 0;
         }
-        .home-wrapper{
+        .home-wrapper {
             padding: 0;
 
         }

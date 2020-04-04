@@ -8,8 +8,6 @@ import User from "@/View/User";
 import EditInfoSection from "@/components/UserComponents/EditInfoSection";
 import UserComments from "../components/UserComponents/UserComments";
 import Vote from "@/View/Vote";
-import NonAmirkabirySignUp from "../components/LogIn/NonAmirkabirySignUp";
-import NonAmirkabiryLogIn from "../components/LogIn/NonAmirkabiryLogIn";
 
 Vue.use(VueRouter);
 
@@ -25,16 +23,7 @@ const routes = [
         component: LogIn,
 
     },
-    {
-        path: '/signup/non-amirkabiry',
-        name: 'signup-non-amirkabiri',
-        component: NonAmirkabirySignUp
-    },
-    {
-      path: '/signin/non-amirkabiry',
-      name: '/signin-non-amirkabiry',
-      component: NonAmirkabiryLogIn
-    },
+
     {
         path: '/short-answer-questions',
         name: 'short-answer-questions',

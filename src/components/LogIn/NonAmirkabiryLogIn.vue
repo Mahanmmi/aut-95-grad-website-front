@@ -33,7 +33,8 @@
                 </div>
                 <div class="button-wrapper">
                     <button id="done">ورود</button>
-                    <button id="cancel">منصرف شدم</button>
+                    <button id="cancel" @click="refreshPage()">برگشت
+                    </button>
                 </div>
             </div>
         </div>
@@ -55,6 +56,11 @@
                     password: ""
                 }
             }
+        },
+        methods:{
+            refreshPage:function () {
+                window.location.reload()
+            }
         }
     }
 </script>
@@ -63,8 +69,9 @@
 <style lang="scss" scoped>
     @import "../../../public/colors";
 
-    .parent{
-        min-height: calc(100vh - 50px);
+    .parent {
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -77,7 +84,6 @@
         padding: 50px;
         margin: 0px 25vw 0px 25vw;
     }
-
 
 
     .fields-wrapper-top {
@@ -115,7 +121,6 @@
         font-size: 35px;
         font-weight: bold;
     }
-
 
 
     .animation {
@@ -214,7 +219,7 @@
         margin: 0 0 40px 5vw;
     }
 
-    .button-wrapper{
+    .button-wrapper {
         margin-top: 30px;
         display: flex;
         flex-direction: row;
@@ -223,29 +228,33 @@
         position: sticky;
         bottom: 20px;
     }
-    .button-wrapper button{
+
+    .button-wrapper button {
         padding: 15px;
         border-radius: 7px;
-        font-size: 25px;
+        font-size: 23px;
         font-weight: bold;
-        width: 200px;
+        width: 18vh;
+        margin: 0 5px 0 5px;
     }
-    #done{
+
+    #done {
         background-color: $aut-grad-secondary;
         color: white;
         border: 2px solid $aut-grad-secondary;
     }
-    #cancel{
+
+    #cancel {
         background-color: white;
         color: $aut-grad-secondary;
         border: 4px solid $aut-grad-secondary;
     }
+
     .button-wrapper button:hover {
         cursor: pointer;
         box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 
     }
-
 
 
     @media only screen and (max-width: 920px) {
@@ -270,10 +279,13 @@
             right: 0;
         }
 
-        .button-wrapper button{
+        .button-wrapper button {
             margin-top: 5px;
             font-size: smaller;
             padding: 10px;
+        }
+        .button-wrapper button {
+            width: auto;
         }
 
     }

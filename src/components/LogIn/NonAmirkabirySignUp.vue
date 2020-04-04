@@ -92,10 +92,7 @@
                 </div>
                 <div class="button-wrapper">
                     <button id="done">ثبت</button>
-                    <router-link to="/signin/non-amirkabiry">
-                        <button id="login">قبلا اکانت ساختم، ورود!</button>
-                    </router-link>
-
+                        <button id="cancel" @click="refreshPage()">برگشت</button>
                 </div>
             </div>
         </div>
@@ -116,6 +113,11 @@
                     birthDate: "",
                     password: ""
                 }
+            }
+        },
+        methods:{
+            refreshPage:function () {
+                window.location.reload()
             }
         }
     }
@@ -305,9 +307,10 @@
     .button-wrapper button {
         padding: 15px;
         border-radius: 7px;
-        font-size: 25px;
+        font-size: 23px;
         font-weight: bold;
-        width: 200px;
+        width: 18vh;
+        margin: 0 5px 0 5px;
     }
 
     #done {
@@ -316,7 +319,7 @@
         border: 2px solid $aut-grad-secondary;
     }
 
-    #login {
+    #cancel {
         background-color: white;
         color: $aut-grad-secondary;
         border: 4px solid $aut-grad-secondary;
@@ -382,6 +385,7 @@
             margin-top: 5px;
             font-size: 17px;
             padding: 10px;
+            width: auto;
         }
 
 
