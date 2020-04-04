@@ -144,9 +144,7 @@
         font-size: 25px;
         font-weight: bold;
     }
-    .sub-button.top-button{
-        margin-top: 60px;
-    }
+
     .content-wrapper{
         display: flex;
         flex-direction: column;
