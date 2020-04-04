@@ -3,36 +3,95 @@
         <div class="content-wrapper">
             <div class="important-info">
                 <div class="head">
-                    <p class="title">ورود</p>
+                    <p class="title">اطلاعات ضروری</p>
                     <i class="material-icons">
                         keyboard_arrow_down
                     </i>
                 </div>
                 <div class="fields-wrapper-top">
-                    <div class="single-field">
-                        <input
-                                class="animation"
-                                id="userName"
-                                type="text"
-                                v-model="this.user.username"
-                                placeholder=" "
-                        />
-                        <label for="userName">نام کاربری</label>
+                    <div class="top">
+                        <div class="right">
+                            <div class="single-field">
+                                <input
+                                        class="animation"
+                                        id="firstName"
+                                        type="text"
+                                        v-model="this.user.firstName"
+                                        placeholder=" "
+                                />
+                                <label for="firstName" id="label-firstName">نام</label>
+                            </div>
+                            <div class="single-field">
+                                <input
+                                        class="animation"
+                                        id="lastName"
+                                        type="text"
+                                        v-model="this.user.lastName"
+                                        placeholder=" "
+                                />
+                                <label for="lastName" id="label-lastName">نام خانوادگی</label>
+                            </div>
+                            <div class="single-field">
+                                <input
+                                        class="animation"
+                                        id="email"
+                                        type="text"
+                                        v-model="this.user.email"
+                                        placeholder="xx@xx.xx"
+                                />
+                                <label for="email">ایمیل</label>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="single-field">
+                                <input
+                                        class="animation"
+                                        id="userName"
+                                        type="text"
+                                        v-model="this.user.username"
+                                        placeholder=" "
+                                />
+                                <label for="userName">نام کاربری</label>
+                            </div>
+                            <div class="single-field">
+                                <input
+                                        class="animation"
+                                        id="birthDate"
+                                        type="text"
+                                        v-model="this.user.birthDate"
+                                        placeholder="**/**/**"
+                                />
+                                <label for="birthDate">تاریخ تولد</label>
+                            </div>
+                            <div class="single-field">
+                                <input
+                                        class="animation"
+                                        id="gender"
+                                        type="password"
+                                        v-model="this.user.password"
+                                        placeholder=" "
+                                />
+                                <label for="gender">رمز عبور</label>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="single-field">
-                        <input
-                                class="animation"
-                                id="gender"
-                                type="password"
-                                v-model="this.user.password"
-                                placeholder=" "
-                        />
-                        <label for="gender">رمز عبور</label>
+                    <div class="bottom">
+                        <div class="single-field">
+                            <textarea
+                                    class="my-text-area animation"
+                                    name=""
+                                    id="about"
+                                    cols=" "
+                                    rows="3"
+                                    v-model="this.user.about"
+                                    placeholder=" "
+                            />
+                            <label for="about">درباره من</label>
+                        </div>
                     </div>
                 </div>
                 <div class="button-wrapper">
-                    <button id="done">ورود</button>
+                    <button id="done">ثبت</button>
                     <button id="cancel">منصرف شدم</button>
                 </div>
             </div>
@@ -42,7 +101,7 @@
 
 <script>
     export default {
-        name: "NonAmirkabiryLogIn",
+        name: "NonAmirkabirySignUp",
         data() {
             return {
                 user: {
@@ -59,7 +118,6 @@
     }
 </script>
 
-
 <style lang="scss" scoped>
     @import "../../../public/colors";
 
@@ -68,7 +126,7 @@
         flex-direction: column;
         justify-content: center;
         padding: 50px;
-        margin: 0px 25vw 0px 25vw;
+        margin: 0px 10vw 0px 10vw;
         height: 77.9vh;
     }
 
@@ -110,7 +168,25 @@
         font-weight: bold;
     }
 
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+    .left {
+        width: 40%;
+        margin-left: 60px;
+    }
+
+    .right {
+        width: 40%;
+        margin-right: 0;
+    }
+
+    .bottom {
+        margin-left: 60px;
+    }
 
     .animation {
         width: 100%;
@@ -205,7 +281,7 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        margin: 0 0 40px 5vw;
+        margin: 0 0 40px 0;
     }
 
     .button-wrapper{
@@ -242,7 +318,27 @@
 
 
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1200px) {
+
+        .top {
+            flex-direction: column;
+            justify-content: center;
+        }
+        .right {
+            width: 90%;
+        }
+        .left {
+            width: 90%;
+        }
+        .bottom {
+            margin: 0;
+            width: 90%;
+        }
+
+
+    }
+
+    @media only screen and (max-width: 768px) {
 
         .fields-wrapper-top {
             font-size: 12px;
@@ -263,12 +359,12 @@
             left: 0;
             right: 0;
         }
-
-        .button-wrapper button{
-            margin-top: 5px;
-            font-size: smaller;
-            padding: 10px;
+        #label-firstName {
+            right: 0px;
         }
 
+        #label-lastName {
+            right: 0px;
+        }
     }
 </style>
