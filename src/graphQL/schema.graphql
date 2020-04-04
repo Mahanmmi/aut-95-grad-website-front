@@ -44,18 +44,24 @@ type Image {
 
 type Mutation {
   addImage(hasThumbnail: Boolean, alternateText: String, path: String!): Image!
-  addCommentForUser(picturePaths: [String!]!, senderNumber: String!, receiverNumber: String!, text: String!): Comment!
+  addCommentForUser(picturePaths: [String!]!, receiverNumber: String!, text: String!): Comment!
   deleteCommentForUser(id: ID!): Comment!
-  AutLogin(code: String!): AutUser!
-  giveAnswer(answer: String!, question: String!, studentNumber: String!): Answer!
+  giveAnswer(answer: String!, question: String!): Answer!
+  addQuestion(phrase: String!): Question!
+  editQuestion(new: String!, old: String!): Question!
+  addTarinCategory(title: String!): TarinCategory!
+  castVote(target: String!, category: String!): Vote!
+  AutLogin(autEmail: String!, studentNumber: String!): AutUser!
 }
 
 type Query {
   allImages: [Image!]!
   getCommentsForUser(studentNumber: String!): [Comment!]!
+  allAnswersToQuestions(user: String!): QuestionAnswer!
+  allVotesByUser(user: String!): Vote!
+  topVotesOfCategory(limit: Float!, category: String!): [TopVotedResult!]!
   getAllGraduating: AutUser!
   getSingleUser(studentNumber: String!): AutUser!
-  allAnswersToQuestions(user: String!): QuestionAnswer!
 }
 
 type Question {
@@ -67,8 +73,24 @@ type QuestionAnswer {
   answer: String!
 }
 
+type TarinCategory {
+  title: String!
+}
+
+type TopVotedResult {
+  numberOfVotes: Float!
+  overallPercentage: Float!
+  fullName: String!
+}
+
 type User {
   firstName: String!
   lastName: String!
   profilePicture: Image!
+}
+
+type Vote {
+  category: TarinCategory!
+  caster: AutUser!
+  target: AutUser!
 }

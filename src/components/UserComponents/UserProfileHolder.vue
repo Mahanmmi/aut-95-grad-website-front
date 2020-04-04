@@ -10,10 +10,10 @@
             <div class="profile-data">
                 <div v-if="!isEditing" class="shifting-wrapper">
                     <div class="user-data">
-                        <vue-text-fit class="data">{{user.name}}</vue-text-fit>
+                        <vue-text-fit class="data">{{user.firstName + " " + user.lastName}}</vue-text-fit>
                         <vue-text-fit class="data">{{user.studentNumber | numberPersianizer}}</vue-text-fit>
-                        <vue-text-fit class="data">{{user.email}}</vue-text-fit>
-                        <vue-text-fit class="data">{{user.age | numberPersianizer | ageFilter}}</vue-text-fit>
+                        <vue-text-fit class="data">{{user.autMail}}</vue-text-fit>
+                        <vue-text-fit class="data">{{user.birthday | toAge}}</vue-text-fit>
                     </div>
                     <div class="divider"/>
                     <div class="most-wrapper">
@@ -59,19 +59,24 @@
 </template>
 
 <script>
+  import _ from "underscore";
   import VueTextFit from "@/components/VueTextFit";
+  import {getUser} from "@/graphQL/Queries/user";
 
   export default {
     name: "UserProfileHolder",
     data() {
       return {
         user: {
-          name: 'اسم گوگولی ما',
+          firstName: 'اسم گوگولی ما',
+          lastName: ':)',
           studentNumber: 9531899,
-          email: 'yegoogooli@googosssslkade.com',
+          autMail: 'yegoogooli@googosssslkade.com',
+          birthday: new Date(1995, 12, 17, 3, 24, 0),
           age: 21
         },
-        shortAnswers: [
+        shortAnswers: []
+        /*shortAnswers: [
           {
             question: 'سلام',
             answer: 'علیک'
@@ -140,7 +145,22 @@
             question: 'هان',
             answer: 'مدرسان شریف'
           }
-        ]
+        ]*/
+      }
+    },
+    apollo: {
+      user: {
+        query: getUser,
+        variables: {
+          studentNumber: '9731026'
+        },
+        update(inp) {
+          if (!_.isEmpty(inp)) {
+            return inp;
+          } else {
+            return this.user;
+          }
+        }
       }
     },
     computed: {
@@ -152,61 +172,22 @@
       }
     },
     filters: {
-      ageFilter(value) {
-        return `${value} سال`
+      toAge(value) {
+        const now = new Date;
+        const age = {
+          year: (now.getFullYear() - value.getFullYear()).toLocaleString("fa"),
+          month: (now.getMonth() - value.getMonth()).toLocaleString("fa"),
+          day: (now.getDay() - now.getDay()).toLocaleString("fa")
+        };
+        let ageStr = `${age.year} سال`;
+        // if (age.month !== '۰') {
+        //   ageStr += ` و ${age.month} ماه`;
+        // }
+        // if(age.day !== '۰') {
+        //   ageStr += ` و ${age.day} روز`;
+        // }
+        return ageStr;
       },
-      numberPersianizer(value) {
-        const num = String(value);
-        let ans = "";
-        for (const c of num) {
-          switch (c) {
-            case '0': {
-              ans += '۰';
-              break;
-            }
-            case '1': {
-              ans += '۱';
-              break;
-            }
-            case '2': {
-              ans += '۲';
-              break;
-            }
-            case '3': {
-              ans += '۳';
-              break;
-            }
-            case '4': {
-              ans += '۴';
-              break;
-            }
-            case '5': {
-              ans += '۵';
-              break;
-            }
-            case '6': {
-              ans += '۶';
-              break;
-            }
-            case '7': {
-              ans += '۷';
-              break;
-            }
-            case '8': {
-              ans += '۸';
-              break;
-            }
-            case '9': {
-              ans += '۹';
-              break;
-            }
-            default: {
-              ans += c;
-            }
-          }
-        }
-        return ans;
-      }
     },
     components: {VueTextFit}
   }
@@ -242,6 +223,7 @@
         border: 5px solid $aut-grad-secondary;
         overflow: hidden;
         z-index: 2;
+        background-color: $aut-grad-secondary;
     }
 
     .profile-pic {

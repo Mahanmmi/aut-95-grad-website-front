@@ -36,11 +36,9 @@
         let stepSize = (this.unit === 'px') ? 1 : 0.05;
         element.style.fontSize = fontSize + this.unit;
         while (element.offsetHeight > this.targetLineCount && fontSize > this.min) {
-          console.log(element.offsetHeight, this.targetLineCount);
           fontSize -= stepSize;
           element.style.fontSize = fontSize + this.unit;
         }
-        console.log('here',element.offsetHeight, this.targetLineCount);
         // found it!!
         // reset the styles
         element.style.display = null;
