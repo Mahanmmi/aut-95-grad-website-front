@@ -92,7 +92,10 @@
                 </div>
                 <div class="button-wrapper">
                     <button id="done">ثبت</button>
-                    <button id="cancel">منصرف شدم</button>
+                    <router-link to="/signin/non-amirkabiry">
+                        <button id="login">قبلا اکانت ساختم، ورود!</button>
+                    </router-link>
+
                 </div>
             </div>
         </div>
@@ -310,7 +313,7 @@
         color: white;
         border: 2px solid $aut-grad-secondary;
     }
-    #cancel{
+    #login{
         background-color: white;
         color: $aut-grad-secondary;
         border: 4px solid $aut-grad-secondary;
