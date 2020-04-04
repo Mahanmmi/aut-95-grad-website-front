@@ -92,7 +92,7 @@
                 </div>
                 <div class="button-wrapper">
                     <button id="done">ثبت</button>
-                        <button id="cancel" @click="refreshPage()">برگشت</button>
+                        <button id="cancel" @click="goBack()">برگشت</button>
                 </div>
             </div>
         </div>
@@ -116,10 +116,12 @@
             }
         },
         methods:{
-            refreshPage:function () {
-                window.location.reload()
+
+            goBack: function () {
+                this.$emit('back', '')
             }
-        }
+        },
+
     }
 </script>
 

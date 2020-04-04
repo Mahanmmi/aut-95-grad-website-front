@@ -15,7 +15,7 @@
 
                     <button class="top-button sub-button" @click="enteringMode= 'signin'">ورود</button>
                     <button class="bottom-button sub-button" @click="enteringMode= 'signup'">ثبت‌نام</button>
-                    <button class="refresh-page" @click="refreshPage()">
+                    <button class="refresh-page" @click="isAmirkabiry=true">
                     <span class="material-icons">undo
                         </span>
                         بازگشت
@@ -24,10 +24,10 @@
             </transition>
         </div>
         <div class="content-wrapper" v-else-if="enteringMode === 'signin'">
-            <NonAmirkabiryLogIn></NonAmirkabiryLogIn>
+            <NonAmirkabiryLogIn @back="childBack"></NonAmirkabiryLogIn>
         </div>
         <div class="content-wrapper" v-else-if="enteringMode === 'signup'">
-            <NonAmirkabirySignUp></NonAmirkabirySignUp>
+            <NonAmirkabirySignUp @back="childBack"></NonAmirkabirySignUp>
         </div>
     </div>
 </template>
@@ -49,8 +49,9 @@
 
         },
         methods:{
-            refreshPage:function () {
-                window.location.reload()
+
+            childBack:function (params) {
+                this.enteringMode=params
             }
         }
     }

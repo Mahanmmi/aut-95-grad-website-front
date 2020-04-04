@@ -33,7 +33,7 @@
                 </div>
                 <div class="button-wrapper">
                     <button id="done">ورود</button>
-                    <button id="cancel" @click="refreshPage()">برگشت
+                    <button id="cancel" @click="goBack()">برگشت
                     </button>
                 </div>
             </div>
@@ -57,9 +57,10 @@
                 }
             }
         },
-        methods:{
-            refreshPage:function () {
-                window.location.reload()
+        methods: {
+
+            goBack: function () {
+                this.$emit('back', '')
             }
         }
     }
