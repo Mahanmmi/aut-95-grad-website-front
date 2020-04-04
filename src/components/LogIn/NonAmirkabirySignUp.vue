@@ -120,6 +120,12 @@
 
 <style lang="scss" scoped>
     @import "../../../public/colors";
+    .parent{
+        min-height: 88vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     .content-wrapper {
         display: flex;
@@ -127,7 +133,6 @@
         justify-content: center;
         padding: 50px;
         margin: 0px 10vw 0px 10vw;
-        height: 77.9vh;
     }
 
 
@@ -365,6 +370,12 @@
 
         #label-lastName {
             right: 0px;
+        }
+
+        .button-wrapper button{
+            margin-top: 5px;
+            font-size: 17px;
+            padding: 10px;
         }
     }
 </style>

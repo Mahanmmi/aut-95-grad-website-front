@@ -63,13 +63,19 @@
 <style lang="scss" scoped>
     @import "../../../public/colors";
 
+    .parent{
+        min-height: 88vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .content-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 50px;
         margin: 0px 25vw 0px 25vw;
-        height: 77.9vh;
     }
 
 
@@ -242,7 +248,7 @@
 
 
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 920px) {
 
         .fields-wrapper-top {
             font-size: 12px;
