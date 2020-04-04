@@ -4,7 +4,7 @@
 </template>
 
 <script>
-    import LogInContent from "../components/LogInContent";
+    import LogInContent from "../components/LogIn/LogInContent";
 
     export default {
         name: "LogIn",

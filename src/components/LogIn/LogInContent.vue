@@ -34,7 +34,7 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "public/colors";
+    @import "../../../public/colors";
 
     .gold-text {
         color: $aut-grad-secondary;

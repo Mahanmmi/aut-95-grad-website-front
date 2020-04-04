@@ -54,6 +54,7 @@
         $dot-space: 35px;
         background-image: radial-gradient($dot-color $dot-size, $dot-bg-color $dot-size);
         background-size: $dot-space $dot-space;
+
     }
 
     @font-face {
