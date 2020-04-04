@@ -16,7 +16,7 @@
                                         class="animation"
                                         id="firstName"
                                         type="text"
-                                        v-model="this.user.firstName"
+                                        v-model="user.firstName"
                                         placeholder=" "
                                 />
                                 <label for="firstName" id="label-firstName">نام</label>
@@ -26,7 +26,7 @@
                                         class="animation"
                                         id="lastName"
                                         type="text"
-                                        v-model="this.user.lastName"
+                                        v-model="user.lastName"
                                         placeholder=" "
                                 />
                                 <label for="lastName" id="label-lastName">نام خانوادگی</label>
@@ -36,7 +36,7 @@
                                         class="animation"
                                         id="email"
                                         type="text"
-                                        v-model="this.user.email"
+                                        v-model="user.email"
                                         placeholder="xx@xx.xx"
                                 />
                                 <label for="email">ایمیل</label>
@@ -48,7 +48,7 @@
                                         class="animation"
                                         id="userName"
                                         type="text"
-                                        v-model="this.user.username"
+                                        v-model="user.username"
                                         placeholder=" "
                                 />
                                 <label for="userName">نام کاربری</label>
@@ -58,7 +58,7 @@
                                         class="animation"
                                         id="birthDate"
                                         type="text"
-                                        v-model="this.user.birthDate"
+                                        v-model="user.birthDate"
                                         placeholder="**/**/**"
                                 />
                                 <label for="birthDate">تاریخ تولد</label>
@@ -68,7 +68,7 @@
                                         class="animation"
                                         id="gender"
                                         type="password"
-                                        v-model="this.user.password"
+                                        v-model="user.password"
                                         placeholder=" "
                                 />
                                 <label for="gender">رمز عبور</label>
@@ -83,7 +83,7 @@
                                     id="about"
                                     cols=" "
                                     rows="3"
-                                    v-model="this.user.about"
+                                    v-model="user.about"
                                     placeholder=" "
                             />
                             <label for="about">درباره من</label>
@@ -123,8 +123,9 @@
 
 <style lang="scss" scoped>
     @import "../../../public/colors";
-    .parent{
-        min-height: 88vh;
+
+    .parent {
+        min-height: calc(100vh - 50px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -137,7 +138,6 @@
         padding: 50px;
         margin: 0px 10vw 0px 10vw;
     }
-
 
 
     .fields-wrapper-top {
@@ -292,7 +292,7 @@
         margin: 0 0 40px 0;
     }
 
-    .button-wrapper{
+    .button-wrapper {
         margin-top: 30px;
         display: flex;
         flex-direction: row;
@@ -301,29 +301,32 @@
         position: sticky;
         bottom: 20px;
     }
-    .button-wrapper button{
+
+    .button-wrapper button {
         padding: 15px;
         border-radius: 7px;
         font-size: 25px;
         font-weight: bold;
         width: 200px;
     }
-    #done{
+
+    #done {
         background-color: $aut-grad-secondary;
         color: white;
         border: 2px solid $aut-grad-secondary;
     }
-    #login{
+
+    #login {
         background-color: white;
         color: $aut-grad-secondary;
         border: 4px solid $aut-grad-secondary;
     }
+
     .button-wrapper button:hover {
         cursor: pointer;
         box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 
     }
-
 
 
     @media only screen and (max-width: 1200px) {
@@ -375,10 +378,12 @@
             right: 0px;
         }
 
-        .button-wrapper button{
+        .button-wrapper button {
             margin-top: 5px;
             font-size: 17px;
             padding: 10px;
         }
+
+
     }
 </style>

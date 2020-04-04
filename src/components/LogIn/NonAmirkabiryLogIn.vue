@@ -14,7 +14,7 @@
                                 class="animation"
                                 id="userName"
                                 type="text"
-                                v-model="this.user.username"
+                                v-model="user.username"
                                 placeholder=" "
                         />
                         <label for="userName">نام کاربری</label>
@@ -25,7 +25,7 @@
                                 class="animation"
                                 id="gender"
                                 type="password"
-                                v-model="this.user.password"
+                                v-model="user.password"
                                 placeholder=" "
                         />
                         <label for="gender">رمز عبور</label>
@@ -64,7 +64,7 @@
     @import "../../../public/colors";
 
     .parent{
-        min-height: 88vh;
+        min-height: calc(100vh - 50px);
         display: flex;
         flex-direction: column;
         justify-content: center;
