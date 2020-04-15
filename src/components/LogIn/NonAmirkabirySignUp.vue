@@ -138,7 +138,7 @@
         flex-direction: column;
         justify-content: center;
         /*padding: 50px;*/
-        /*margin: 0px 10vw 0px 10vw;*/
+        /*margin: 0px 10vw 0 10vw;*/
     }
 
 
@@ -162,14 +162,14 @@
         /*background-color: white;*/
         /*margin: 0 30px 30px 30px;*/
         /*border-radius: 10px;*/
-        /*box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);*/
+        /*box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);*/
     }
 
     .head {
         margin: 0 30px 18px 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -210,6 +210,10 @@
         margin-left: 60px;
         align-self: center;
         width: 90%;
+    }
+
+    .my-text-area {
+        resize: none;
     }
 
     .animation {
@@ -342,7 +346,7 @@
 
     .button-wrapper button:hover {
         cursor: pointer;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
 
     }
 
@@ -372,11 +376,11 @@
 
         .fields-wrapper-top {
             font-size: 12px;
-            margin: 0px 0 20px 0;
+            margin: 0 0 20px 0;
         }
 
         .head {
-            margin: 0px 0 20px 0;
+            margin: 0 0 20px 0;
         }
 
         .title {
@@ -390,11 +394,11 @@
             right: 0;
         }
         #label-firstName {
-            right: 0px;
+            right: 0;
         }
 
         #label-lastName {
-            right: 0px;
+            right: 0;
         }
 
         .button-wrapper button {

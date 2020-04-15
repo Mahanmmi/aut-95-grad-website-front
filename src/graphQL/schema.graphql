@@ -6,7 +6,7 @@ type Answer {
 type AutUser {
   firstName: String!
   lastName: String!
-  profilePicture: Image!
+  profilePicture: Image
   studentNumber: String!
   birthday: DateTime
   birthPlace: String
@@ -42,13 +42,19 @@ type Image {
   hasThumbnail: Boolean
 }
 
+type MegaAutUser {
+  user: AutUser!
+  votedCategories: [TarinCategory!]!
+  commentsForUser: [Comment!]!
+  answersToQuestions: [QuestionAnswer!]!
+}
+
 type Mutation {
   addImage(hasThumbnail: Boolean, alternateText: String, path: String!): Image!
   addCommentForUser(picturePaths: [String!]!, receiverNumber: String!, text: String!): Comment!
   deleteCommentForUser(id: ID!): Comment!
   giveAnswer(answer: String!, question: String!): Answer!
-  addQuestion(phrase: String!): Question!
-  editQuestion(new: String!, old: String!): Question!
+  addOrChangeQuestion(old: String!, phrase: String!): Question!
   addTarinCategory(title: String!): TarinCategory!
   castVote(target: String!, category: String!): Vote!
   AutLogin(autEmail: String!, studentNumber: String!): AutUser!
@@ -56,12 +62,11 @@ type Mutation {
 
 type Query {
   allImages: [Image!]!
-  getCommentsForUser(studentNumber: String!): [Comment!]!
-  allAnswersToQuestions(user: String!): QuestionAnswer!
   allVotesByUser(user: String!): Vote!
   topVotesOfCategory(limit: Float!, category: String!): [TopVotedResult!]!
-  getAllGraduating: AutUser!
-  getSingleUser(studentNumber: String!): AutUser!
+  topVotesOfAllCategories(limit: Float!): [[TopVotedResult!]!]!
+  getAllGraduating: [AutUser!]!
+  getSingleUser(studentNumber: String!): MegaAutUser!
 }
 
 type Question {
@@ -86,7 +91,7 @@ type TopVotedResult {
 type User {
   firstName: String!
   lastName: String!
-  profilePicture: Image!
+  profilePicture: Image
 }
 
 type Vote {

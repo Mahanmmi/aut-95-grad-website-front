@@ -9,28 +9,28 @@
                 <div class="fields-wrapper-top">
                     <div class="single-field">
                         <input
-                                class="animation"
-                                id="userName"
-                                type="text"
-                                v-model="user.username"
-                                placeholder=" "
+                            class="animation"
+                            id="userName"
+                            type="text"
+                            v-model="user.username"
+                            placeholder=" "
                         />
                         <label for="userName">نام کاربری</label>
                     </div>
 
                     <div class="single-field">
                         <input
-                                class="animation"
-                                id="gender"
-                                type="password"
-                                v-model="user.password"
-                                placeholder=" "
+                            class="animation"
+                            id="gender"
+                            type="password"
+                            v-model="user.password"
+                            placeholder=" "
                         />
                         <label for="gender">رمز عبور</label>
                     </div>
                 </div>
                 <div class="button-wrapper">
-                    <button id="done">ورود</button>
+                    <button id="done" @click="login()">ورود</button>
                     <button id="cancel" @click="goBack()">برگشت
                     </button>
                 </div>
@@ -40,28 +40,38 @@
 </template>
 
 <script>
-    export default {
-        name: "NonAmirkabiryLogIn",
-        data() {
-            return {
-                user: {
-                    firstName: "",
-                    lastName: "",
-                    email: "",
-                    about: "",
-                    username: "",
-                    birthDate: "",
-                    password: ""
-                }
-            }
-        },
-        methods: {
+  // import _ from "underscore";
+  // import {loginMutation} from "@/graphQL/Queries/user";
 
-            goBack: function () {
-                this.$emit('back', '')
-            }
+  import {loginMutation} from "@/graphQL/Queries/user";
+
+  export default {
+    name: "NonAmirkabiryLogIn",
+    data() {
+      return {
+        user: {
+          username: "",
+          password: ""
         }
+      }
+    },
+    methods: {
+      login() {
+        this.$apollo.mutate({
+          mutation: loginMutation,
+          variables: {
+            username: this.user.username,
+            autEmail: this.user.password
+          },
+          client: "loginClient"
+        });
+      },
+      goBack: function () {
+        console.log(this.$apollo);
+        this.$emit('back', '')
+      }
     }
+  }
 </script>
 
 
@@ -111,7 +121,7 @@
         margin: 0 30px 18px 30px;
         background-color: $aut-grad-primary;
         border-radius: 10px;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -263,7 +273,7 @@
 
     .button-wrapper button:hover {
         cursor: pointer;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
 
     }
 
@@ -272,11 +282,11 @@
 
         .fields-wrapper-top {
             font-size: 12px;
-            margin: 0px 0 20px 0;
+            margin: 0 0 20px 0;
         }
 
         .head {
-            margin: 0px 0 20px 0;
+            margin: 0 0 20px 0;
         }
 
         .title {

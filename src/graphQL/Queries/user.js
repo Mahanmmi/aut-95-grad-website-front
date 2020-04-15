@@ -15,24 +15,27 @@ import gql from 'graphql-tag'
 export const getUser = gql`
     query getUser($studentNumber: String!){
         getSingleUser(studentNumber: $studentNumber) {
-            firstName,
-            lastName,
-            autMail,
-            studentNumber,
-            birthday,
-            profilePicture {
-                alternateText,
-                path
+            user {
+                firstName,
+                lastName,
+                autMail,
+                studentNumber,
+                birthday,
+                profilePicture {
+                    alternateText,
+                    path
+                }
             }
         }
     }
 `;
 
 export const loginMutation = gql`
-    mutation loginMutation($autEmail: String!, $studentNumber: String!) {
-        AutLogin(autEmail: $autEmail, studentNumber: $studentNumber) {
+    mutation loginMutation($autEmail: String!, $username: String!) {
+        AutLogin(autEmail: $autEmail, studentNumber: $username) {
             firstName,
-            lastName
+            lastName,
+            studentNumber
         }
     }
 `;

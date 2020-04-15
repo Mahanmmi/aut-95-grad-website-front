@@ -10,7 +10,7 @@ import {router} from "@/router/router";
 import {store} from "@/store/store";
 import {apolloProvider} from "@/graphQL/graphQL";
 
-new Vue({
+export const app = new Vue({
   render: h => h(App),
   router,
   store,
